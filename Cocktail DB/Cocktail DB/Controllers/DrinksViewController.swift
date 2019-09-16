@@ -8,6 +8,7 @@
 
 import UIKit
 import Moya
+import SDWebImage
 
 class DrinksViewController: UIViewController {
     
@@ -35,6 +36,16 @@ class DrinksViewController: UIViewController {
 
         NetworkManager.environment = TypeDrinks.ordinary_Drink
 
+        networkManager.getDrinks { [weak self] (drinks, error) in
+            if let error = error {
+                print("ERROR: \(error)")
+                return
+            }
+            self?.drinks = drinks ?? []
+            self?.tableView.reloadData()
+        }
+        NetworkManager.environment = TypeDrinks.ordinary_Drink
+        
         networkManager.getDrinks { [weak self] (drinks, error) in
             if let error = error {
                 print("ERROR: \(error)")
@@ -79,11 +90,8 @@ extension DrinksViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DrinksCell", for: indexPath) as! DrinksTableViewCell
-//        if let url = URL(string: recents[indexPath.row].image), let data = try? Data(contentsOf: url), let image = UIImage(data: data) {
-//            cell.drinkImage.image = image
-//        }
-        
-        cell.drinkImage.image = UIImage(named: "image") //drinks[indexPath.item].strDrinkThumb
+
+        cell.drinkImage.sd_setImage(with: URL(string: drinks[indexPath.item].strDrinkThumb), placeholderImage: UIImage(named: "image"))
 
         cell.nameLabel.text = drinks[indexPath.item].strDrink
         
