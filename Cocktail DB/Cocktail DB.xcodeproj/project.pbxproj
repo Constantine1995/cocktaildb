@@ -3,25 +3,53 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		AD5D53F2232CC0720038C175 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5D53F1232CC0720038C175 /* AppDelegate.swift */; };
-		AD5D53F4232CC0720038C175 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5D53F3232CC0720038C175 /* ViewController.swift */; };
+		AD5D53F4232CC0720038C175 /* DrinksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5D53F3232CC0720038C175 /* DrinksViewController.swift */; };
 		AD5D53F7232CC0720038C175 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD5D53F5232CC0720038C175 /* Main.storyboard */; };
 		AD5D53F9232CC0740038C175 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD5D53F8232CC0740038C175 /* Assets.xcassets */; };
 		AD5D53FC232CC0740038C175 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD5D53FA232CC0740038C175 /* LaunchScreen.storyboard */; };
+		AD5D5408232E87880038C175 /* DrinksCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5D5407232E87880038C175 /* DrinksCategory.swift */; };
+		AD5D540B232E8CA20038C175 /* Networkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5D540A232E8CA20038C175 /* Networkable.swift */; };
+		AD5D540D232E8FC50038C175 /* DrinksCategoryServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5D540C232E8FC50038C175 /* DrinksCategoryServices.swift */; };
+		AD5D540F232E90000038C175 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5D540E232E90000038C175 /* NetworkManager.swift */; };
+		AD5D5411232EB1980038C175 /* DrinksCategoryListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5D5410232EB1980038C175 /* DrinksCategoryListResponse.swift */; };
+		AD5D5413232EC9DF0038C175 /* DrinksServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5D5412232EC9DF0038C175 /* DrinksServices.swift */; };
+		AD5D5415232F56270038C175 /* Drinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5D5414232F56270038C175 /* Drinks.swift */; };
+		AD5D5417232F56AD0038C175 /* DrinksListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5D5416232F56AD0038C175 /* DrinksListResponse.swift */; };
+		AD5D5422232F82380038C175 /* DrinksCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5D5420232F82380038C175 /* DrinksCategoryTableViewCell.swift */; };
+		AD5D5423232F82380038C175 /* DrinksCategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD5D5421232F82380038C175 /* DrinksCategoryTableViewCell.xib */; };
+		AD5D5426232F85A50038C175 /* DrinksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5D5424232F85A50038C175 /* DrinksTableViewCell.swift */; };
+		AD5D5427232F85A50038C175 /* DrinksTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD5D5425232F85A50038C175 /* DrinksTableViewCell.xib */; };
+		BA4791CDECD5266A64627956 /* Pods_Cocktail_DB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC3C3A21B6F27DBBDF1FDE2 /* Pods_Cocktail_DB.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F5A1953D9B677EB8370F38B /* Pods-Cocktail DB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cocktail DB.debug.xcconfig"; path = "Target Support Files/Pods-Cocktail DB/Pods-Cocktail DB.debug.xcconfig"; sourceTree = "<group>"; };
 		AD5D53EE232CC0720038C175 /* Cocktail DB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cocktail DB.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD5D53F1232CC0720038C175 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AD5D53F3232CC0720038C175 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AD5D53F3232CC0720038C175 /* DrinksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksViewController.swift; sourceTree = "<group>"; };
 		AD5D53F6232CC0720038C175 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD5D53F8232CC0740038C175 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD5D53FB232CC0740038C175 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD5D53FD232CC0740038C175 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD5D5407232E87880038C175 /* DrinksCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksCategory.swift; sourceTree = "<group>"; };
+		AD5D540A232E8CA20038C175 /* Networkable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networkable.swift; sourceTree = "<group>"; };
+		AD5D540C232E8FC50038C175 /* DrinksCategoryServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksCategoryServices.swift; sourceTree = "<group>"; };
+		AD5D540E232E90000038C175 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		AD5D5410232EB1980038C175 /* DrinksCategoryListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksCategoryListResponse.swift; sourceTree = "<group>"; };
+		AD5D5412232EC9DF0038C175 /* DrinksServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksServices.swift; sourceTree = "<group>"; };
+		AD5D5414232F56270038C175 /* Drinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drinks.swift; sourceTree = "<group>"; };
+		AD5D5416232F56AD0038C175 /* DrinksListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksListResponse.swift; sourceTree = "<group>"; };
+		AD5D5420232F82380038C175 /* DrinksCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksCategoryTableViewCell.swift; sourceTree = "<group>"; };
+		AD5D5421232F82380038C175 /* DrinksCategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrinksCategoryTableViewCell.xib; sourceTree = "<group>"; };
+		AD5D5424232F85A50038C175 /* DrinksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksTableViewCell.swift; sourceTree = "<group>"; };
+		AD5D5425232F85A50038C175 /* DrinksTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrinksTableViewCell.xib; sourceTree = "<group>"; };
+		BEAF615D35141736829D13F1 /* Pods-Cocktail DB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cocktail DB.release.xcconfig"; path = "Target Support Files/Pods-Cocktail DB/Pods-Cocktail DB.release.xcconfig"; sourceTree = "<group>"; };
+		CAC3C3A21B6F27DBBDF1FDE2 /* Pods_Cocktail_DB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cocktail_DB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +57,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA4791CDECD5266A64627956 /* Pods_Cocktail_DB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		71CFBB8460C9F23FC43EED0B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CAC3C3A21B6F27DBBDF1FDE2 /* Pods_Cocktail_DB.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9A46AA4B9B6C0082BB1B4E72 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2F5A1953D9B677EB8370F38B /* Pods-Cocktail DB.debug.xcconfig */,
+				BEAF615D35141736829D13F1 /* Pods-Cocktail DB.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		AD5D53E5232CC0720038C175 = {
 			isa = PBXGroup;
 			children = (
 				AD5D53F0232CC0720038C175 /* Cocktail DB */,
 				AD5D53EF232CC0720038C175 /* Products */,
+				9A46AA4B9B6C0082BB1B4E72 /* Pods */,
+				71CFBB8460C9F23FC43EED0B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +102,66 @@
 		AD5D53F0232CC0720038C175 /* Cocktail DB */ = {
 			isa = PBXGroup;
 			children = (
+				AD5D5409232E8C930038C175 /* Extensions */,
+				AD5D5406232E87770038C175 /* Services */,
+				AD5D5405232E7FB20038C175 /* Views */,
+				AD5D5404232E7FA60038C175 /* Models */,
+				AD5D5403232E7F980038C175 /* Controllers */,
 				AD5D53F1232CC0720038C175 /* AppDelegate.swift */,
-				AD5D53F3232CC0720038C175 /* ViewController.swift */,
 				AD5D53F5232CC0720038C175 /* Main.storyboard */,
 				AD5D53F8232CC0740038C175 /* Assets.xcassets */,
 				AD5D53FA232CC0740038C175 /* LaunchScreen.storyboard */,
 				AD5D53FD232CC0740038C175 /* Info.plist */,
 			);
 			path = "Cocktail DB";
+			sourceTree = "<group>";
+		};
+		AD5D5403232E7F980038C175 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AD5D53F3232CC0720038C175 /* DrinksViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AD5D5404232E7FA60038C175 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AD5D5407232E87880038C175 /* DrinksCategory.swift */,
+				AD5D5414232F56270038C175 /* Drinks.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AD5D5405232E7FB20038C175 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AD5D5420232F82380038C175 /* DrinksCategoryTableViewCell.swift */,
+				AD5D5421232F82380038C175 /* DrinksCategoryTableViewCell.xib */,
+				AD5D5424232F85A50038C175 /* DrinksTableViewCell.swift */,
+				AD5D5425232F85A50038C175 /* DrinksTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AD5D5406232E87770038C175 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AD5D540C232E8FC50038C175 /* DrinksCategoryServices.swift */,
+				AD5D540E232E90000038C175 /* NetworkManager.swift */,
+				AD5D5410232EB1980038C175 /* DrinksCategoryListResponse.swift */,
+				AD5D5412232EC9DF0038C175 /* DrinksServices.swift */,
+				AD5D5416232F56AD0038C175 /* DrinksListResponse.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		AD5D5409232E8C930038C175 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AD5D540A232E8CA20038C175 /* Networkable.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +171,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD5D5400232CC0740038C175 /* Build configuration list for PBXNativeTarget "Cocktail DB" */;
 			buildPhases = (
+				A0F2E04B125D676A52BC3B81 /* [CP] Check Pods Manifest.lock */,
 				AD5D53EA232CC0720038C175 /* Sources */,
 				AD5D53EB232CC0720038C175 /* Frameworks */,
 				AD5D53EC232CC0720038C175 /* Resources */,
+				A9EA2B9014F656228F2B6760 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -122,21 +224,75 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD5D5423232F82380038C175 /* DrinksCategoryTableViewCell.xib in Resources */,
 				AD5D53FC232CC0740038C175 /* LaunchScreen.storyboard in Resources */,
 				AD5D53F9232CC0740038C175 /* Assets.xcassets in Resources */,
 				AD5D53F7232CC0720038C175 /* Main.storyboard in Resources */,
+				AD5D5427232F85A50038C175 /* DrinksTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A0F2E04B125D676A52BC3B81 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Cocktail DB-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9EA2B9014F656228F2B6760 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Cocktail DB/Pods-Cocktail DB-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Cocktail DB/Pods-Cocktail DB-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Cocktail DB/Pods-Cocktail DB-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AD5D53EA232CC0720038C175 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD5D53F4232CC0720038C175 /* ViewController.swift in Sources */,
+				AD5D5411232EB1980038C175 /* DrinksCategoryListResponse.swift in Sources */,
+				AD5D540F232E90000038C175 /* NetworkManager.swift in Sources */,
+				AD5D5426232F85A50038C175 /* DrinksTableViewCell.swift in Sources */,
+				AD5D5408232E87880038C175 /* DrinksCategory.swift in Sources */,
+				AD5D5415232F56270038C175 /* Drinks.swift in Sources */,
+				AD5D53F4232CC0720038C175 /* DrinksViewController.swift in Sources */,
+				AD5D540B232E8CA20038C175 /* Networkable.swift in Sources */,
+				AD5D540D232E8FC50038C175 /* DrinksCategoryServices.swift in Sources */,
+				AD5D5417232F56AD0038C175 /* DrinksListResponse.swift in Sources */,
+				AD5D5413232EC9DF0038C175 /* DrinksServices.swift in Sources */,
 				AD5D53F2232CC0720038C175 /* AppDelegate.swift in Sources */,
+				AD5D5422232F82380038C175 /* DrinksCategoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +436,7 @@
 		};
 		AD5D5401232CC0740038C175 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F5A1953D9B677EB8370F38B /* Pods-Cocktail DB.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +454,7 @@
 		};
 		AD5D5402232CC0740038C175 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEAF615D35141736829D13F1 /* Pods-Cocktail DB.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
