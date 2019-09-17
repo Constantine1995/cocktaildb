@@ -13,8 +13,6 @@ class NetworkManager: Networkable {
     var providerCategory = MoyaProvider<DrinksCategoryServices>(plugins: [NetworkLoggerPlugin(verbose: false)])
     var provider = MoyaProvider<DrinksServices>(plugins: [NetworkLoggerPlugin(verbose: false)])
 
-    static var environment: TypeDrinks?
-
     // get Category
     func getDrinksCategory(completion: @escaping ([DrinksCategory]?, Error?) -> ()) {
         
