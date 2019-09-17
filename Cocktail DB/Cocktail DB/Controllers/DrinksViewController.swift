@@ -18,57 +18,48 @@ class DrinksViewController: UIViewController {
     
     var drinksCategory: [DrinksCategory] = []
     var drinks: [Drinks] = []
-
+    
+    let drinkList: [String] = ["Ordinary_Drink", "Cocktail", "Cocoa", "Shot", "Ordinary_Drink", "Ordinary_Drink", "Ordinary_Drink", "Ordinary_Drink", "Ordinary_Drink", "Beer", "Ordinary_Drink"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let drinkCellNib = UINib(nibName: "DrinksTableViewCell", bundle: nil)
-        tableView.register(drinkCellNib, forCellReuseIdentifier: "DrinksCell") //TODO: написать реализацию, чтобы доставать id из самого класса
-
+        tableView.register(drinkCellNib, forCellReuseIdentifier: "DrinksCell")
+        
+        // Получение категорий, передача в массив и далее вывод на экран
         networkManager.getDrinksCategory { [weak self] (drinks, error) in
             
             if let error = error {
                 print("ERROR: \(error)")
                 return
             }
-
-            self?.getDrinks(drinks: drinks!)
-        }
-
-        NetworkManager.environment = TypeDrinks.ordinary_Drink
-
-        networkManager.getDrinks { [weak self] (drinks, error) in
-            if let error = error {
-                print("ERROR: \(error)")
-                return
-            }
-            self?.drinks = drinks ?? []
+            guard let drinks = drinks else { return }
+            
+            self?.drinksCategory = drinks
             self?.tableView.reloadData()
         }
-        NetworkManager.environment = TypeDrinks.ordinary_Drink
         
-        networkManager.getDrinks { [weak self] (drinks, error) in
+        // Получение напитков для каждой категории (type -  передается название напитка, посдтавляется в параметры ссылки)
+        // Не знаю как отобразить для каждой категории соответствующие напитки
+        networkManager.getDrinks(type: "Ordinary_Drink", completion: { [weak self] (drinks, error) in
             if let error = error {
                 print("ERROR: \(error)")
                 return
             }
-            self?.drinks = drinks ?? []
+            
+            guard let drinks = drinks else { return }
+            self?.drinks = drinks
             self?.tableView.reloadData()
-        }
+        })
     }
-    
-    func getDrinks(drinks: [DrinksCategory]) {
-       self.drinksCategory = drinks
-        tableView.reloadData()
-    }
-    
 }
 
 extension DrinksViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-
+        
         let headerView = Bundle.main.loadNibNamed("DrinksCategoryTableViewCell", owner: self, options: nil)?.first as! DrinksCategoryTableViewCell
         headerView.titleLabel.text = drinksCategory[section].strCategory
-
+        
         return headerView
     }
     
@@ -80,7 +71,7 @@ extension DrinksViewController: UITableViewDelegate {
 extension DrinksViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-
+        
         return drinksCategory.count
     }
     
@@ -90,12 +81,13 @@ extension DrinksViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DrinksCell", for: indexPath) as! DrinksTableViewCell
-
-        cell.drinkImage.sd_setImage(with: URL(string: drinks[indexPath.item].strDrinkThumb), placeholderImage: UIImage(named: "image"))
-
+        let url = URL(string: drinks[indexPath.item].strDrinkThumb)
+        
+        cell.drinkImage.sd_setImage(with: url, placeholderImage: UIImage(named: "placeholder"))
+        
         cell.nameLabel.text = drinks[indexPath.item].strDrink
         
-       return cell
+        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

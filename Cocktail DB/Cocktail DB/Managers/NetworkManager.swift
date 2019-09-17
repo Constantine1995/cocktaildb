@@ -10,12 +10,12 @@ import Moya
 
 class NetworkManager: Networkable {
     
-    var providerCategory = MoyaProvider<DrinksCategoryServices>(plugins: [NetworkLoggerPlugin(verbose: false)]) // used for testing
-    var provider = MoyaProvider<DrinksServices>(plugins: [NetworkLoggerPlugin(verbose: false)]) // used for testing
+    var providerCategory = MoyaProvider<DrinksCategoryServices>(plugins: [NetworkLoggerPlugin(verbose: false)])
+    var provider = MoyaProvider<DrinksServices>(plugins: [NetworkLoggerPlugin(verbose: false)])
 
-//    static var environment: TypeDrinks = .ordinary_Drink
     static var environment: TypeDrinks?
 
+    // get Category
     func getDrinksCategory(completion: @escaping ([DrinksCategory]?, Error?) -> ()) {
         
         providerCategory.request(.getDrinksCategory) { (response) in
@@ -34,9 +34,10 @@ class NetworkManager: Networkable {
         }
     }
     
-    func getDrinks(completion: @escaping ([Drinks]?, Error?) -> ()) {
+    // get drinks
+    func getDrinks(type: String, completion: @escaping ([Drinks]?, Error?) -> ()) {
         
-        provider.request(.getDrinks) { (response) in
+        provider.request(.getDrinks(type: type)) { (response) in
             switch response.result {
             case .failure(let error):
                 completion(nil, error)
@@ -48,26 +49,6 @@ class NetworkManager: Networkable {
                 } catch let error {
                     completion(nil, error)
                 }
-            }
-        }
-    }
-    
-    func getImage(completion: @escaping (UIImage?, Error?) -> ()) {
-        
-        provider.request(.getDrinks) { (response) in
-            switch response.result {
-            case .failure(let error):
-                completion(nil, error)
-            case .success(let value):
-                return
-//
-//                let decoder = JSONDecoder()
-//                do {
-//                    let drinksList: DrinksListResponse = try decoder.decode(DrinksListResponse.self, from: value.data)
-//                    completion(drinksList.drinks, nil)
-//                } catch let error {
-//                    completion(nil, error)
-//                }
             }
         }
     }

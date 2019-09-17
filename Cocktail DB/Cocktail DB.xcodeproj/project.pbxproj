@@ -103,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				AD5D5409232E8C930038C175 /* Extensions */,
+				AD9ECA422330C968001B4D52 /* Managers */,
 				AD5D5406232E87770038C175 /* Services */,
 				AD5D5405232E7FB20038C175 /* Views */,
 				AD5D5404232E7FA60038C175 /* Models */,
@@ -136,10 +137,8 @@
 		AD5D5405232E7FB20038C175 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				AD5D5420232F82380038C175 /* DrinksCategoryTableViewCell.swift */,
-				AD5D5421232F82380038C175 /* DrinksCategoryTableViewCell.xib */,
-				AD5D5424232F85A50038C175 /* DrinksTableViewCell.swift */,
-				AD5D5425232F85A50038C175 /* DrinksTableViewCell.xib */,
+				AD9ECA432330C9F8001B4D52 /* DrinkCategory */,
+				AD9ECA442330CA01001B4D52 /* Drinks */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -147,11 +146,8 @@
 		AD5D5406232E87770038C175 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				AD5D540C232E8FC50038C175 /* DrinksCategoryServices.swift */,
-				AD5D540E232E90000038C175 /* NetworkManager.swift */,
-				AD5D5410232EB1980038C175 /* DrinksCategoryListResponse.swift */,
-				AD5D5412232EC9DF0038C175 /* DrinksServices.swift */,
-				AD5D5416232F56AD0038C175 /* DrinksListResponse.swift */,
+				AD9ECA402330C938001B4D52 /* DrinkCategory */,
+				AD9ECA412330C954001B4D52 /* Drink */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -162,6 +158,50 @@
 				AD5D540A232E8CA20038C175 /* Networkable.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AD9ECA402330C938001B4D52 /* DrinkCategory */ = {
+			isa = PBXGroup;
+			children = (
+				AD5D540C232E8FC50038C175 /* DrinksCategoryServices.swift */,
+				AD5D5410232EB1980038C175 /* DrinksCategoryListResponse.swift */,
+			);
+			path = DrinkCategory;
+			sourceTree = "<group>";
+		};
+		AD9ECA412330C954001B4D52 /* Drink */ = {
+			isa = PBXGroup;
+			children = (
+				AD5D5412232EC9DF0038C175 /* DrinksServices.swift */,
+				AD5D5416232F56AD0038C175 /* DrinksListResponse.swift */,
+			);
+			path = Drink;
+			sourceTree = "<group>";
+		};
+		AD9ECA422330C968001B4D52 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				AD5D540E232E90000038C175 /* NetworkManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		AD9ECA432330C9F8001B4D52 /* DrinkCategory */ = {
+			isa = PBXGroup;
+			children = (
+				AD5D5420232F82380038C175 /* DrinksCategoryTableViewCell.swift */,
+				AD5D5421232F82380038C175 /* DrinksCategoryTableViewCell.xib */,
+			);
+			path = DrinkCategory;
+			sourceTree = "<group>";
+		};
+		AD9ECA442330CA01001B4D52 /* Drinks */ = {
+			isa = PBXGroup;
+			children = (
+				AD5D5424232F85A50038C175 /* DrinksTableViewCell.swift */,
+				AD5D5425232F85A50038C175 /* DrinksTableViewCell.xib */,
+			);
+			path = Drinks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -13,6 +13,5 @@ protocol Networkable {
     var provider: MoyaProvider<DrinksServices> { get }
 
     func getDrinksCategory(completion: @escaping ([DrinksCategory]?, Error?) -> ())
-    func getDrinks(completion: @escaping ([Drinks]?, Error?) -> ())
-
+    func getDrinks(type: String, completion: @escaping ([Drinks]?, Error?) -> ())
 }

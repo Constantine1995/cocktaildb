@@ -25,14 +25,18 @@ enum TypeDrinks: String {
 }
 
 enum DrinksServices: TargetType {
-    case getDrinks
+    
+    case getDrinks(type: String)
+    
     var baseURL: URL {
-        guard let url = URL(string: "https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=\(enviromentBaseURL)") else { fatalError("baseURL could not be configured")}
-        return url
+        return URL(string: "https://www.thecocktaildb.com/api/json/v1/1")!
     }
     
     var path: String {
-        return ""
+        switch self {
+        case .getDrinks(_):
+            return "/filter.php"
+        }
     }
     
     var method: Moya.Method {
@@ -48,15 +52,50 @@ enum DrinksServices: TargetType {
     
     var task: Task {
         switch self {
-        case .getDrinks:
-            return .requestPlain
+        case .getDrinks(let type):
+            return .requestParameters(parameters: [
+                "c": type
+                ], encoding: URLEncoding.default)
         }
     }
-    
     var headers: [String : String]? {
         return ["Content-type": "application/json; charset=UTF-8"]
     }
 }
+
+//enum DrinksServices: TargetType {
+//    case getDrinks
+//    var baseURL: URL {
+//        guard let url = URL(string: "https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=\(enviromentBaseURL)") else { fatalError("baseURL could not be configured")}
+//        return url
+//    }
+//
+//    var path: String {
+//        return ""
+//    }
+//
+//    var method: Moya.Method {
+//        switch self {
+//        case .getDrinks:
+//            return .get
+//        }
+//    }
+//
+//    var sampleData: Data {
+//        return Data()
+//    }
+//
+//    var task: Task {
+//        switch self {
+//        case .getDrinks:
+//            return .requestPlain
+//        }
+//    }
+//
+//    var headers: [String : String]? {
+//        return ["Content-type": "application/json; charset=UTF-8"]
+//    }
+//}
 
 extension DrinksServices {
     
@@ -69,23 +108,23 @@ extension DrinksServices {
         case .сocktail?:
             return "Cocktail"
         case .milkFloatShake?:
-            return ""
+            return "Cocoa" //
         case .other?:
-            return ""
+            return "Cocoa" //
         case .cocoa?:
             return "Cocoa"
         case .shot?:
             return "Shot"
         case .coffeeTea?:
-            return ""
+            return "Cocoa" //
         case .homemadeLiquer?:
-            return ""
+            return "Cocoa" //
         case .punchPartyDrink?:
-            return ""
+            return "Cocoa" //
         case .beer?:
             return "Beer"
         case .softDrinkSoda?:
-            return ""
+            return "Cocoa" //
             
         case .none:
             return ""
