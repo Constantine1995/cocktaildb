@@ -9,8 +9,8 @@
 import Foundation
 import Moya
 protocol Networkable {
-    var providerCategory: MoyaProvider<DrinksCategoryServices> { get }
-    var provider: MoyaProvider<DrinksServices> { get }
+    var categoryProvider: MoyaProvider<DrinksCategoryServices> { get }
+    var drinkProvider: MoyaProvider<DrinksServices> { get }
 
     func getDrinksCategory(completion: @escaping ([DrinksCategory]?, Error?) -> ())
     func getDrinks(type: String, completion: @escaping ([Drinks]?, Error?) -> ())

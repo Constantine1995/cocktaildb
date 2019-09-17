@@ -8,22 +8,21 @@
 
 import Moya
 
-struct Drinks: Codable {
-    var strDrink: String
-    var strDrinkThumb: String
-    var idDrink: String
-
-    enum CodingKeys: String, CodingKey {
-        case strDrink
-        case strDrinkThumb
-        case idDrink
-    }
-    
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.strDrink = try! container.decode(String.self, forKey: .strDrink)
-        self.strDrinkThumb = try! container.decode(String.self, forKey: .strDrinkThumb)
-        self.idDrink = try! container.decode(String.self, forKey: .idDrink)
-
-    }
-}
+//struct Drinks: Codable {
+//    var strDrink: String
+//    var strDrinkThumb: String
+//    var idDrink: String
+//
+//    enum CodingKeys: String, CodingKey {
+//        case strDrink
+//        case strDrinkThumb
+//        case idDrink
+//    }
+//    
+//    init(from decoder: Decoder) throws {
+//        let container = try decoder.container(keyedBy: CodingKeys.self)
+//        self.strDrink = try! container.decode(String.self, forKey: .strDrink)
+//        self.strDrinkThumb = try! container.decode(String.self, forKey: .strDrinkThumb)
+//        self.idDrink = try! container.decode(String.self, forKey: .idDrink)
+//    }
+//}

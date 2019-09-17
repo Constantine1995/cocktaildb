@@ -6,7 +6,6 @@
 //  Copyright © 2019 Constantine Likhachov. All rights reserved.
 //
 
-
 import Moya
 
 enum DrinksServices: TargetType {
@@ -43,6 +42,7 @@ enum DrinksServices: TargetType {
                 ], encoding: URLEncoding.default)
         }
     }
+    
     var headers: [String : String]? {
         return ["Content-type": "application/json; charset=UTF-8"]
     }

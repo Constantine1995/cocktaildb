@@ -8,4 +8,5 @@ target 'Cocktail DB' do
   # Pods for Cocktail DB
     pod 'Moya'
     pod 'SDWebImage'
+    pod 'ObjectMapper'
 end
