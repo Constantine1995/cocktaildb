@@ -6,6 +6,7 @@ PODS:
     - Alamofire (~> 4.1)
     - Result (~> 4.1)
   - ObjectMapper (3.5.1)
+  - PPBadgeViewSwift (3.1.0)
   - Result (4.1.0)
   - SDWebImage (5.1.0):
     - SDWebImage/Core (= 5.1.0)
@@ -15,6 +16,7 @@ PODS:
 DEPENDENCIES:
   - Moya
   - ObjectMapper
+  - PPBadgeViewSwift
   - SDWebImage
   - SVProgressHUD
 
@@ -23,6 +25,7 @@ SPEC REPOS:
     - Alamofire
     - Moya
     - ObjectMapper
+    - PPBadgeViewSwift
     - Result
     - SDWebImage
     - SVProgressHUD
@@ -31,10 +34,11 @@ SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
   ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
+  PPBadgeViewSwift: 18a219a9897f418342c22dd1a54f7b18ac56546b
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   SDWebImage: fb387001955223213dde14bc08c8b73f371f8d8f
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: ee999b9edd1e3c976016671beff3f3620dc6913f
+PODFILE CHECKSUM: 2dc5ecc6dd0f80738b107a5bf40bdf48aa4092bf
 
 COCOAPODS: 1.7.4

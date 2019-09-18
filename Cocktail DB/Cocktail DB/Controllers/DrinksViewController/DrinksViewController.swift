@@ -9,10 +9,12 @@
 import UIKit
 import SDWebImage
 import SVProgressHUD
+import PPBadgeViewSwift
 
 protocol DataSourceDelegate {
     func didLoadCategories()
     func didLoadDrinksForSection(section: Int)
+    func willLoadDrinks()
 }
 
 class DrinksViewController: UIViewController {
@@ -23,7 +25,7 @@ class DrinksViewController: UIViewController {
     
     private lazy var dataSource = DrinksDataSource(delegate: self)
     
-    let heightForHeaderInSection: CGFloat = 30.0
+    let heightForHeaderInSection: CGFloat = 44.0
     let heightForRowAt: CGFloat = 88.0
   
     // MARK: - Initialization
@@ -36,12 +38,37 @@ class DrinksViewController: UIViewController {
     private func configureViewController() {
         SVProgressHUD.show()
         dataSource.loadCategories()
-//        configureNavigationItems()
         configureTableView()
+        configureNavigationItems()
     }
     
     private func configureTableView() {
         tableView.register(DrinksTableViewCell.nib, forCellReuseIdentifier: DrinksTableViewCell.reuseIdentifier)
+        tableView.register(DrinkCategoryHeader.nib, forHeaderFooterViewReuseIdentifier: DrinkCategoryHeader.reuseIdentifier)
+
+    }
+    
+    private func configureNavigationItems() {
+        let rightBarButton = UIBarButtonItem(image: UIImage(named: "filterImage"), style: .plain, target: self, action: #selector(filtersButtonPressed))
+        navigationItem.rightBarButtonItem = rightBarButton
+        navigationController?.navigationBar.tintColor = .black
+    }
+    
+    @objc private func filtersButtonPressed() {
+        routeToFilters()
+    }
+    
+    private func isRightBarbuttonItemBadgeHidden(_ value: Bool) {
+        guard let rightBarButton = self.navigationItem.rightBarButtonItem else { return }
+        
+        value ? rightBarButton.pp.addDot(color: .red) : rightBarButton.pp.hiddenBadge()
+    }
+    
+    private func routeToFilters() {
+        let filters = dataSource.getCategoriesNames()
+        guard !filters.isEmpty else { return }
+        let filtersViewController = FiltersViewController.create(with: filters, delegate: self)
+        self.navigationController?.pushViewController(filtersViewController, animated: true)
     }
 }
 
@@ -54,10 +81,9 @@ extension DrinksViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        
-        let headerView = Bundle.main.loadNibNamed("DrinksCategoryTableViewCell", owner: self, options: nil)?.first as! DrinksCategoryTableViewCell
+        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: DrinkCategoryHeader.reuseIdentifier) as? DrinkCategoryHeader
         let category = dataSource.categoryForSection(section)
-        headerView.titleLabel.text = category.strCategory.uppercased()
+        headerView?.categoryLabel.text = category.strCategory.uppercased()        
         return headerView
     }
     
@@ -109,5 +135,19 @@ extension DrinksViewController: DataSourceDelegate {
         if section == dataSource.numberOfSections() - 1 {
          SVProgressHUD.dismiss()
         }
+    }
+    
+    func willLoadDrinks() {
+        SVProgressHUD.show()
+        tableView.reloadData()
+    }
+}
+
+// MARK: - DrinksViewControllerDeleghate
+
+extension DrinksViewController: FiltersViewControllerDelegate {
+    func filtersDidChange(filters: [String]) {
+        isRightBarbuttonItemBadgeHidden(!filters.isEmpty)
+        dataSource.setCategoriesToFilter(from: filters)
     }
 }

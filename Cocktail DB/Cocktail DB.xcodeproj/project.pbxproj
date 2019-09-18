@@ -13,8 +13,6 @@
 		AD5D53F9232CC0740038C175 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD5D53F8232CC0740038C175 /* Assets.xcassets */; };
 		AD5D53FC232CC0740038C175 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD5D53FA232CC0740038C175 /* LaunchScreen.storyboard */; };
 		AD5D540B232E8CA20038C175 /* Networkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5D540A232E8CA20038C175 /* Networkable.swift */; };
-		AD5D5422232F82380038C175 /* DrinksCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5D5420232F82380038C175 /* DrinksCategoryTableViewCell.swift */; };
-		AD5D5423232F82380038C175 /* DrinksCategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD5D5421232F82380038C175 /* DrinksCategoryTableViewCell.xib */; };
 		AD5D5426232F85A50038C175 /* DrinksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5D5424232F85A50038C175 /* DrinksTableViewCell.swift */; };
 		AD5D5427232F85A50038C175 /* DrinksTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD5D5425232F85A50038C175 /* DrinksTableViewCell.xib */; };
 		AD9ECA472330E52F001B4D52 /* BaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9ECA462330E52F001B4D52 /* BaseProvider.swift */; };
@@ -25,6 +23,12 @@
 		AD9ECA5E233104E2001B4D52 /* UIView+ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9ECA5D233104E2001B4D52 /* UIView+ReuseIdentifier.swift */; };
 		AD9ECA6823320444001B4D52 /* DrinksList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9ECA6723320444001B4D52 /* DrinksList.swift */; };
 		AD9ECA6A233212DC001B4D52 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9ECA69233212DC001B4D52 /* Drink.swift */; };
+		AD9ECA6E233218F8001B4D52 /* FiltersViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD9ECA6C233218F8001B4D52 /* FiltersViewController.storyboard */; };
+		AD9ECA7123321AFA001B4D52 /* FiltersViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9ECA7023321AFA001B4D52 /* FiltersViewControllerDelegate.swift */; };
+		AD9ECA7623321B2A001B4D52 /* FilterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD9ECA7423321B2A001B4D52 /* FilterCell.xib */; };
+		AD9ECA7823321B38001B4D52 /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9ECA7723321B38001B4D52 /* FilterCell.swift */; };
+		AD9ECA8423322D43001B4D52 /* DrinkCategoryHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9ECA8223322D43001B4D52 /* DrinkCategoryHeader.swift */; };
+		AD9ECA8523322D43001B4D52 /* DrinkCategoryHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD9ECA8323322D43001B4D52 /* DrinkCategoryHeader.xib */; };
 		BA4791CDECD5266A64627956 /* Pods_Cocktail_DB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC3C3A21B6F27DBBDF1FDE2 /* Pods_Cocktail_DB.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,8 +42,6 @@
 		AD5D53FB232CC0740038C175 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD5D53FD232CC0740038C175 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD5D540A232E8CA20038C175 /* Networkable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networkable.swift; sourceTree = "<group>"; };
-		AD5D5420232F82380038C175 /* DrinksCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksCategoryTableViewCell.swift; sourceTree = "<group>"; };
-		AD5D5421232F82380038C175 /* DrinksCategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrinksCategoryTableViewCell.xib; sourceTree = "<group>"; };
 		AD5D5424232F85A50038C175 /* DrinksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksTableViewCell.swift; sourceTree = "<group>"; };
 		AD5D5425232F85A50038C175 /* DrinksTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrinksTableViewCell.xib; sourceTree = "<group>"; };
 		AD9ECA462330E52F001B4D52 /* BaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProvider.swift; sourceTree = "<group>"; };
@@ -50,6 +52,12 @@
 		AD9ECA5D233104E2001B4D52 /* UIView+ReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ReuseIdentifier.swift"; sourceTree = "<group>"; };
 		AD9ECA6723320444001B4D52 /* DrinksList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksList.swift; sourceTree = "<group>"; };
 		AD9ECA69233212DC001B4D52 /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
+		AD9ECA6C233218F8001B4D52 /* FiltersViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FiltersViewController.storyboard; sourceTree = "<group>"; };
+		AD9ECA7023321AFA001B4D52 /* FiltersViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewControllerDelegate.swift; sourceTree = "<group>"; };
+		AD9ECA7423321B2A001B4D52 /* FilterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterCell.xib; sourceTree = "<group>"; };
+		AD9ECA7723321B38001B4D52 /* FilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
+		AD9ECA8223322D43001B4D52 /* DrinkCategoryHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkCategoryHeader.swift; sourceTree = "<group>"; };
+		AD9ECA8323322D43001B4D52 /* DrinkCategoryHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrinkCategoryHeader.xib; sourceTree = "<group>"; };
 		BEAF615D35141736829D13F1 /* Pods-Cocktail DB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cocktail DB.release.xcconfig"; path = "Target Support Files/Pods-Cocktail DB/Pods-Cocktail DB.release.xcconfig"; sourceTree = "<group>"; };
 		CAC3C3A21B6F27DBBDF1FDE2 /* Pods_Cocktail_DB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cocktail_DB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -120,6 +128,7 @@
 		AD5D5403232E7F980038C175 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AD9ECA6B233218F8001B4D52 /* FiltersViewController */,
 				AD9ECA602331F60D001B4D52 /* DrinksViewController */,
 			);
 			path = Controllers;
@@ -137,7 +146,7 @@
 		AD5D5405232E7FB20038C175 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				AD9ECA632331F6C5001B4D52 /* Headers */,
+				AD9ECA8123322D43001B4D52 /* Headers */,
 				AD9ECA642331F6D4001B4D52 /* Cells */,
 			);
 			path = Views;
@@ -160,20 +169,11 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		AD9ECA432330C9F8001B4D52 /* DrinkCategoryCell */ = {
-			isa = PBXGroup;
-			children = (
-				AD5D5420232F82380038C175 /* DrinksCategoryTableViewCell.swift */,
-				AD5D5421232F82380038C175 /* DrinksCategoryTableViewCell.xib */,
-			);
-			path = DrinkCategoryCell;
-			sourceTree = "<group>";
-		};
 		AD9ECA442330CA01001B4D52 /* DrinksCell */ = {
 			isa = PBXGroup;
 			children = (
-				AD5D5424232F85A50038C175 /* DrinksTableViewCell.swift */,
 				AD5D5425232F85A50038C175 /* DrinksTableViewCell.xib */,
+				AD5D5424232F85A50038C175 /* DrinksTableViewCell.swift */,
 			);
 			path = DrinksCell;
 			sourceTree = "<group>";
@@ -204,17 +204,10 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		AD9ECA632331F6C5001B4D52 /* Headers */ = {
-			isa = PBXGroup;
-			children = (
-				AD9ECA432330C9F8001B4D52 /* DrinkCategoryCell */,
-			);
-			path = Headers;
-			sourceTree = "<group>";
-		};
 		AD9ECA642331F6D4001B4D52 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				AD9ECA7223321B2A001B4D52 /* FilterCell */,
 				AD9ECA442330CA01001B4D52 /* DrinksCell */,
 			);
 			path = Cells;
@@ -237,6 +230,34 @@
 				AD9ECA482330E544001B4D52 /* DrinkProvider.swift */,
 			);
 			path = Providers;
+			sourceTree = "<group>";
+		};
+		AD9ECA6B233218F8001B4D52 /* FiltersViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AD9ECA6C233218F8001B4D52 /* FiltersViewController.storyboard */,
+				AD9ECA7023321AFA001B4D52 /* FiltersViewControllerDelegate.swift */,
+			);
+			path = FiltersViewController;
+			sourceTree = "<group>";
+		};
+		AD9ECA7223321B2A001B4D52 /* FilterCell */ = {
+			isa = PBXGroup;
+			children = (
+				AD9ECA7423321B2A001B4D52 /* FilterCell.xib */,
+				AD9ECA7723321B38001B4D52 /* FilterCell.swift */,
+			);
+			path = FilterCell;
+			sourceTree = "<group>";
+		};
+		AD9ECA8123322D43001B4D52 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				AD9ECA8223322D43001B4D52 /* DrinkCategoryHeader.swift */,
+				AD9ECA8323322D43001B4D52 /* DrinkCategoryHeader.xib */,
+			);
+			name = Headers;
+			path = Headers/Headers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,11 +320,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD5D5423232F82380038C175 /* DrinksCategoryTableViewCell.xib in Resources */,
 				AD5D53FC232CC0740038C175 /* LaunchScreen.storyboard in Resources */,
+				AD9ECA6E233218F8001B4D52 /* FiltersViewController.storyboard in Resources */,
 				AD5D53F9232CC0740038C175 /* Assets.xcassets in Resources */,
 				AD5D53F7232CC0720038C175 /* DrinksViewController.storyboard in Resources */,
 				AD5D5427232F85A50038C175 /* DrinksTableViewCell.xib in Resources */,
+				AD9ECA7623321B2A001B4D52 /* FilterCell.xib in Resources */,
+				AD9ECA8523322D43001B4D52 /* DrinkCategoryHeader.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,16 +382,18 @@
 				AD9ECA552330FC9E001B4D52 /* DrinkService.swift in Sources */,
 				AD5D5426232F85A50038C175 /* DrinksTableViewCell.swift in Sources */,
 				AD9ECA492330E544001B4D52 /* DrinkProvider.swift in Sources */,
+				AD9ECA8423322D43001B4D52 /* DrinkCategoryHeader.swift in Sources */,
 				AD9ECA472330E52F001B4D52 /* BaseProvider.swift in Sources */,
+				AD9ECA7823321B38001B4D52 /* FilterCell.swift in Sources */,
 				AD9ECA4D2330E86E001B4D52 /* Category.swift in Sources */,
 				AD5D53F4232CC0720038C175 /* DrinksViewController.swift in Sources */,
 				AD5D540B232E8CA20038C175 /* Networkable.swift in Sources */,
 				AD9ECA5E233104E2001B4D52 /* UIView+ReuseIdentifier.swift in Sources */,
 				AD9ECA6823320444001B4D52 /* DrinksList.swift in Sources */,
+				AD9ECA7123321AFA001B4D52 /* FiltersViewControllerDelegate.swift in Sources */,
 				AD9ECA512330E95B001B4D52 /* DrinksDataSource.swift in Sources */,
 				AD9ECA6A233212DC001B4D52 /* Drink.swift in Sources */,
 				AD5D53F2232CC0720038C175 /* AppDelegate.swift in Sources */,
-				AD5D5422232F82380038C175 /* DrinksCategoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

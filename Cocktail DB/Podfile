@@ -10,5 +10,5 @@ target 'Cocktail DB' do
     pod 'SDWebImage'
     pod 'ObjectMapper'
     pod 'SVProgressHUD'
-
+    pod 'PPBadgeViewSwift'
 end

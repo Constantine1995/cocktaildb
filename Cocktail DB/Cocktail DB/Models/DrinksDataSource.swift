@@ -53,6 +53,10 @@ class DrinksDataSource {
 
     //MARK - Helpers
     
+    func getCategoriesNames() -> [String] {
+        return categories.compactMap { $0.strCategory }
+    }
+    
     func numberOfSections() -> Int {
         return categories.count
     }
@@ -75,6 +79,18 @@ class DrinksDataSource {
         guard drinks.count > section else { return 0 }
         
         return drinks[section].count
+    }
+    
+    func setCategoriesToFilter(from categoriesNames: [String]) {
+        if categoriesNames.isEmpty {
+            categories = allCategories
+        } else {
+            categories = allCategories.filter { categoriesNames.contains($0.strCategory ) }
+        }
+        
+        drinks.removeAll()
+        delegate.willLoadDrinks()
+        loadDrinksByCategories(categories)
     }
     
     //MARK: - Data did load methods

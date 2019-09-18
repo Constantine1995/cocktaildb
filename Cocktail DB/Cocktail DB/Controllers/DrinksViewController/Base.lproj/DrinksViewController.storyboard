@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Drinks View Controller-->
+        <!--Drinks-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="DrinksViewController" customModule="Cocktail_DB" customModuleProvider="target" sceneMemberID="viewController">
@@ -36,7 +36,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="0un-Ab-Vsd"/>
+                    <navigationItem key="navigationItem" title="Drinks" id="CaG-8N-pUx"/>
                     <connections>
                         <outlet property="tableView" destination="9Sv-Nw-Flf" id="Z9a-0D-yXL"/>
                     </connections>
