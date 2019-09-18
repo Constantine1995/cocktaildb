@@ -8,12 +8,11 @@
 
 import UIKit
 import SDWebImage
-import Moya
+import SVProgressHUD
 
 protocol DataSourceDelegate {
     func didLoadCategories()
     func didLoadDrinksForSection(section: Int)
-    func willLoadDrinks()
 }
 
 class DrinksViewController: UIViewController {
@@ -22,22 +21,27 @@ class DrinksViewController: UIViewController {
     
     private lazy var dataSource = DrinksDataSource(delegate: self)
     
+    let heightForHeaderInSection: CGFloat = 30.0
+    let heightForRowAt: CGFloat = 88.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupViewController()
+        configureViewController()
     }
     
-    private func setupViewController() {
-        //        SVProgressHUD.show()
+    private func configureViewController() {
+        SVProgressHUD.show()
         dataSource.loadCategories()
-        //        setupNavigationItems()
-        registerTableViewClasses()
+//        configureNavigationItems()
+        configureTableView()
     }
     
-    private func registerTableViewClasses() {
+    private func configureTableView() {
         tableView.register(DrinksTableViewCell.nib, forCellReuseIdentifier: DrinksTableViewCell.reuseIdentifier)
     }
 }
+
+// MARK: - UITableViewDelegate
 
 extension DrinksViewController: UITableViewDelegate {
     
@@ -54,7 +58,7 @@ extension DrinksViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 30.0
+        return heightForHeaderInSection
     }
 }
 
@@ -84,7 +88,7 @@ extension DrinksViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 88.0
+        return heightForRowAt
     }
 }
 
@@ -99,13 +103,7 @@ extension DrinksViewController: DataSourceDelegate {
     func didLoadDrinksForSection(section: Int) {
         tableView.reloadSections(IndexSet(integer: section), with: .automatic)
         if section == dataSource.numberOfSections() - 1 {
-            print("SVProgressHUD.dismiss()")
-            //            SVProgressHUD.dismiss()
+         SVProgressHUD.dismiss()
         }
-    }
-    
-    func willLoadDrinks() {
-        //      SVProgressHUD.show()
-        tableView.reloadData()
     }
 }

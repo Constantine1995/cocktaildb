@@ -9,4 +9,6 @@ target 'Cocktail DB' do
     pod 'Moya'
     pod 'SDWebImage'
     pod 'ObjectMapper'
+    pod 'SVProgressHUD'
+
 end
