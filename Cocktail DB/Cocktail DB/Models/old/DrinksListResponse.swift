@@ -6,10 +6,10 @@
 //  Copyright © 2019 Constantine Likhachov. All rights reserved.
 //
 
-//struct DrinksListResponse: Decodable {
-//    let drinks: [Drinks]
-//    
-//    enum CodingKeys: String, CodingKey {
-//        case drinks
-//    }
-//}
+struct DrinksListResponse: Decodable {
+    let drinks: DrinksCodable
+    
+    enum CodingKeys: String, CodingKey {
+        case drinks
+    }
+}

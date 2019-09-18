@@ -8,12 +8,12 @@
 
 import Moya
 
-class DrinkService {//: Networkable {
+class DrinkService: Networkable {
     
     private var drinkProvider = MoyaProvider<DrinkProvider>()
     
     // get Category
-    func loadCategories(completion: @escaping (Categories?, Error?) -> ()) {
+    func fetchCategories(completion: @escaping (Categories?, Error?) -> ()) {
         
         drinkProvider.request(.listCategories) { (response) in
             switch response.result {
@@ -29,13 +29,20 @@ class DrinkService {//: Networkable {
     }
     
     // get drinks
-    func loadDrinks(categoryName: String, completion: @escaping (Drinks?, Error?) -> ()) {
+    func fetchDrinks(categoryName: String, completion: @escaping (Drinks?, Error?) -> ()) {
         
         drinkProvider.request(.listDrinks(categoryName: categoryName)) { (response) in
             switch response.result {
             case .failure(let error):
                 completion(nil, error)
             case .success(let value):
+//                let decoder = JSONDecoder()
+//                                do {
+//                                    let drinksList: DrinksListResponse = try decoder.decode(DrinksListResponse.self, from: value.data)
+//                                    completion(drinksList.drinks, nil)
+//                                } catch let error {
+//                                    completion(nil, error)
+//                                }
                 let json = try! JSONSerialization.jsonObject(with: value.data)
                 guard let dict = json as? [String: Any] else { return }
                 let drinks = Drinks(JSON: dict)

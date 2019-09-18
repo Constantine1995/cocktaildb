@@ -8,7 +8,6 @@
 
 import Moya
 
-typealias Codable = Encodable & Decodable
 
 struct DrinksCategory: Codable {
     var strCategory: String
