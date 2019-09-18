@@ -78,11 +78,11 @@ extension DrinksViewController: UITableViewDataSource {
         
         let drink = dataSource.drinkForIndexPath(indexPath: indexPath)
         
-        let url = URL(string: drink.strDrinkThumb ?? "")
+        let url = URL(string: drink.strDrinkThumb )
         
         cell.drinkImage.sd_setImage(with: url, placeholderImage: UIImage(named: "placeholder"))
         
-        cell.nameLabel.text = drink.strDrink ?? "Empty"
+        cell.nameLabel.text = drink.strDrink
         
         return cell
     }
