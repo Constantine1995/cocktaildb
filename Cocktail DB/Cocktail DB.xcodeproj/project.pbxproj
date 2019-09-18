@@ -13,8 +13,8 @@
 		AD5D53F9232CC0740038C175 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD5D53F8232CC0740038C175 /* Assets.xcassets */; };
 		AD5D53FC232CC0740038C175 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD5D53FA232CC0740038C175 /* LaunchScreen.storyboard */; };
 		AD5D540B232E8CA20038C175 /* Networkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5D540A232E8CA20038C175 /* Networkable.swift */; };
-		AD5D5426232F85A50038C175 /* DrinksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5D5424232F85A50038C175 /* DrinksTableViewCell.swift */; };
-		AD5D5427232F85A50038C175 /* DrinksTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD5D5425232F85A50038C175 /* DrinksTableViewCell.xib */; };
+		AD5D5426232F85A50038C175 /* DrinkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5D5424232F85A50038C175 /* DrinkCell.swift */; };
+		AD5D5427232F85A50038C175 /* DrinkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD5D5425232F85A50038C175 /* DrinkCell.xib */; };
 		AD9ECA472330E52F001B4D52 /* BaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9ECA462330E52F001B4D52 /* BaseProvider.swift */; };
 		AD9ECA492330E544001B4D52 /* DrinkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9ECA482330E544001B4D52 /* DrinkProvider.swift */; };
 		AD9ECA4D2330E86E001B4D52 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9ECA4C2330E86E001B4D52 /* Category.swift */; };
@@ -61,8 +61,8 @@
 		AD5D53FB232CC0740038C175 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD5D53FD232CC0740038C175 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD5D540A232E8CA20038C175 /* Networkable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networkable.swift; sourceTree = "<group>"; };
-		AD5D5424232F85A50038C175 /* DrinksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksTableViewCell.swift; sourceTree = "<group>"; };
-		AD5D5425232F85A50038C175 /* DrinksTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrinksTableViewCell.xib; sourceTree = "<group>"; };
+		AD5D5424232F85A50038C175 /* DrinkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkCell.swift; sourceTree = "<group>"; };
+		AD5D5425232F85A50038C175 /* DrinkCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrinkCell.xib; sourceTree = "<group>"; };
 		AD9ECA462330E52F001B4D52 /* BaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProvider.swift; sourceTree = "<group>"; };
 		AD9ECA482330E544001B4D52 /* DrinkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkProvider.swift; sourceTree = "<group>"; };
 		AD9ECA4C2330E86E001B4D52 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
@@ -150,11 +150,7 @@
 		AD5D53F0232CC0720038C175 /* Cocktail DB */ = {
 			isa = PBXGroup;
 			children = (
-				AD5D5404232E7FA60038C175 /* Models */,
-				AD5D5405232E7FB20038C175 /* Views */,
-				AD5D5403232E7F980038C175 /* Controllers */,
-				AD9ECA452330E51D001B4D52 /* API */,
-				AD5D5409232E8C930038C175 /* Extensions */,
+				AD9ECAB0233261AD001B4D52 /* Classes */,
 				AD5D53F1232CC0720038C175 /* AppDelegate.swift */,
 				AD5D53F8232CC0740038C175 /* Assets.xcassets */,
 				AD5D53FA232CC0740038C175 /* LaunchScreen.storyboard */,
@@ -176,9 +172,7 @@
 		AD5D5404232E7FA60038C175 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				AD9ECA69233212DC001B4D52 /* Drink.swift */,
-				AD9ECA4C2330E86E001B4D52 /* Category.swift */,
-				AD9ECA6723320444001B4D52 /* DrinksList.swift */,
+				AD9ECAB423326330001B4D52 /* Objects */,
 				AD9ECA502330E95B001B4D52 /* DrinksDataSource.swift */,
 			);
 			path = Models;
@@ -214,8 +208,8 @@
 		AD9ECA442330CA01001B4D52 /* DrinksCell */ = {
 			isa = PBXGroup;
 			children = (
-				AD5D5425232F85A50038C175 /* DrinksTableViewCell.xib */,
-				AD5D5424232F85A50038C175 /* DrinksTableViewCell.swift */,
+				AD5D5425232F85A50038C175 /* DrinkCell.xib */,
+				AD5D5424232F85A50038C175 /* DrinkCell.swift */,
 			);
 			path = DrinksCell;
 			sourceTree = "<group>";
@@ -333,6 +327,28 @@
 			path = Roboto;
 			sourceTree = "<group>";
 		};
+		AD9ECAB0233261AD001B4D52 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AD5D5404232E7FA60038C175 /* Models */,
+				AD5D5405232E7FB20038C175 /* Views */,
+				AD5D5403232E7F980038C175 /* Controllers */,
+				AD9ECA452330E51D001B4D52 /* API */,
+				AD5D5409232E8C930038C175 /* Extensions */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		AD9ECAB423326330001B4D52 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				AD9ECA69233212DC001B4D52 /* Drink.swift */,
+				AD9ECA4C2330E86E001B4D52 /* Category.swift */,
+				AD9ECA6723320444001B4D52 /* DrinksList.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -406,7 +422,7 @@
 				AD9ECAA5233250A8001B4D52 /* RobotoCondensed-Regular.ttf in Resources */,
 				AD5D53F9232CC0740038C175 /* Assets.xcassets in Resources */,
 				AD5D53F7232CC0720038C175 /* DrinksViewController.storyboard in Resources */,
-				AD5D5427232F85A50038C175 /* DrinksTableViewCell.xib in Resources */,
+				AD5D5427232F85A50038C175 /* DrinkCell.xib in Resources */,
 				AD9ECA9F233250A8001B4D52 /* Roboto-Regular.ttf in Resources */,
 				AD9ECAA4233250A8001B4D52 /* Roboto-ThinItalic.ttf in Resources */,
 				AD9ECAA6233250A8001B4D52 /* Roboto-BoldItalic.ttf in Resources */,
@@ -471,7 +487,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD9ECA552330FC9E001B4D52 /* DrinkService.swift in Sources */,
-				AD5D5426232F85A50038C175 /* DrinksTableViewCell.swift in Sources */,
+				AD5D5426232F85A50038C175 /* DrinkCell.swift in Sources */,
 				AD9ECA492330E544001B4D52 /* DrinkProvider.swift in Sources */,
 				AD9ECA8423322D43001B4D52 /* DrinkCategoryHeader.swift in Sources */,
 				AD9ECA472330E52F001B4D52 /* BaseProvider.swift in Sources */,

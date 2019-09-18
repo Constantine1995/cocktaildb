@@ -44,7 +44,7 @@ class DrinksViewController: UIViewController {
     }
     
     private func configureTableView() {
-        tableView.register(DrinksTableViewCell.nib, forCellReuseIdentifier: DrinksTableViewCell.reuseIdentifier)
+        tableView.register(DrinkCell.nib, forCellReuseIdentifier: DrinkCell.reuseIdentifier)
         tableView.register(DrinkCategoryHeader.nib, forHeaderFooterViewReuseIdentifier: DrinkCategoryHeader.reuseIdentifier)
 
     }
@@ -105,7 +105,7 @@ extension DrinksViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: DrinksTableViewCell.reuseIdentifier, for: indexPath) as! DrinksTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: DrinkCell.reuseIdentifier, for: indexPath) as! DrinkCell
         
         let drink = dataSource.drinkForIndexPath(indexPath: indexPath)
         

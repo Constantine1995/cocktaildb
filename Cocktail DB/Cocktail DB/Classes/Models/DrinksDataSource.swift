@@ -78,7 +78,7 @@ class DrinksDataSource {
     }
     
     func drinkForIndexPath(indexPath: IndexPath) -> Drink {
-        let defaultDrink = Drink.init(strDrink: "", strDrinkThumb: "", idDrink: "")
+        let defaultDrink = Drink.init(strDrink: "", strDrinkThumb: "")
         guard drinks.count > indexPath.section, drinks[indexPath.section].count > indexPath.row else { return defaultDrink}
         return drinks[indexPath.section][indexPath.row]
     }

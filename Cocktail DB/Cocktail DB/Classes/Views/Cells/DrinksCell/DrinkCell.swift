@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DrinksTableViewCell: UITableViewCell {
+class DrinkCell: UITableViewCell {
     
     // MARK: - Properties & IBOutlets
 

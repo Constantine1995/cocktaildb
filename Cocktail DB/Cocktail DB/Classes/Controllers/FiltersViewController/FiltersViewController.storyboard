@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1VK-Ni-ega">
-                                <rect key="frame" x="0.0" y="64" width="375" height="525"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="509"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="sQv-MT-jA8" id="nqz-8h-cYp"/>
@@ -32,7 +32,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RqN-hm-zLc">
-                                <rect key="frame" x="28" y="617" width="319" height="50"/>
+                                <rect key="frame" x="28" y="601" width="319" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="ymL-Tl-SjF"/>
                                 </constraints>
@@ -52,7 +52,7 @@
                             <constraint firstItem="RqN-hm-zLc" firstAttribute="top" secondItem="1VK-Ni-ega" secondAttribute="bottom" constant="28" id="9jB-XJ-Wa0"/>
                             <constraint firstItem="RqN-hm-zLc" firstAttribute="centerX" secondItem="dvc-kR-gvr" secondAttribute="centerX" id="Atb-ko-pPW"/>
                             <constraint firstItem="1VK-Ni-ega" firstAttribute="centerX" secondItem="dvc-kR-gvr" secondAttribute="centerX" id="QbT-vB-4NP"/>
-                            <constraint firstItem="dvc-kR-gvr" firstAttribute="bottom" secondItem="RqN-hm-zLc" secondAttribute="bottom" id="SEF-Mh-LqI"/>
+                            <constraint firstItem="dvc-kR-gvr" firstAttribute="bottom" secondItem="RqN-hm-zLc" secondAttribute="bottom" constant="16" id="SEF-Mh-LqI"/>
                             <constraint firstItem="1VK-Ni-ega" firstAttribute="leading" secondItem="dvc-kR-gvr" secondAttribute="leading" id="fJz-cm-RZ3"/>
                             <constraint firstItem="RqN-hm-zLc" firstAttribute="leading" secondItem="dvc-kR-gvr" secondAttribute="leading" constant="28" id="jio-dH-lO2"/>
                             <constraint firstItem="1VK-Ni-ega" firstAttribute="top" secondItem="dvc-kR-gvr" secondAttribute="top" id="uIg-T3-5X3"/>
