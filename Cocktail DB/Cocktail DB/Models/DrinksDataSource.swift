@@ -10,6 +10,8 @@ import Moya
 
 class DrinksDataSource {
     
+    // MARK: Properties
+
     private let drinksService = DrinkService()
     private var categories = [Category]()
     private var allCategories = [Category]()

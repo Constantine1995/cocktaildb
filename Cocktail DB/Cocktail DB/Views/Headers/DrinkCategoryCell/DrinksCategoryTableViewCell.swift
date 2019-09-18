@@ -9,11 +9,8 @@
 import UIKit
 
 class DrinksCategoryTableViewCell: UITableViewCell {
+    
+    // MARK: - Properties & IBOutlets
 
     @IBOutlet weak var titleLabel: UILabel!
-   
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
 }

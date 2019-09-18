@@ -17,13 +17,17 @@ protocol DataSourceDelegate {
 
 class DrinksViewController: UIViewController {
     
+    // MARK: - Properties & IBOutlets
+
     @IBOutlet weak var tableView: UITableView!
     
     private lazy var dataSource = DrinksDataSource(delegate: self)
     
     let heightForHeaderInSection: CGFloat = 30.0
     let heightForRowAt: CGFloat = 88.0
-    
+  
+    // MARK: - Initialization
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewController()
@@ -53,7 +57,7 @@ extension DrinksViewController: UITableViewDelegate {
         
         let headerView = Bundle.main.loadNibNamed("DrinksCategoryTableViewCell", owner: self, options: nil)?.first as! DrinksCategoryTableViewCell
         let category = dataSource.categoryForSection(section)
-        headerView.titleLabel.text = category.strCategory.uppercased() ?? "Empty"
+        headerView.titleLabel.text = category.strCategory.uppercased()
         return headerView
     }
     

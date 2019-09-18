@@ -6,8 +6,6 @@
 //  Copyright © 2019 Constantine Likhachov. All rights reserved.
 //
 
-import Moya
-
 typealias Codable = Encodable & Decodable
 typealias DrinkList = DrinksList<Drink>
 

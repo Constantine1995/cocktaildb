@@ -9,12 +9,9 @@
 import UIKit
 
 class DrinksTableViewCell: UITableViewCell {
+    
+    // MARK: - Properties & IBOutlets
 
     @IBOutlet weak var drinkImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
 }
