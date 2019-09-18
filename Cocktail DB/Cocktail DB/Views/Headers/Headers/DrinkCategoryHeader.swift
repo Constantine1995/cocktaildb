@@ -13,5 +13,4 @@ class DrinkCategoryHeader: UITableViewHeaderFooterView {
     // MARK: - Properties & IBOutlets
     
     @IBOutlet weak var categoryLabel: UILabel!
-    
 }
