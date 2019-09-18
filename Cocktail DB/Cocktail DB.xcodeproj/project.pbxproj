@@ -47,6 +47,7 @@
 		AD9ECAAA233250A8001B4D52 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD9ECA98233250A8001B4D52 /* Roboto-Bold.ttf */; };
 		AD9ECAAB233250A8001B4D52 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD9ECA99233250A8001B4D52 /* Roboto-Thin.ttf */; };
 		AD9ECAAC233250A8001B4D52 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AD9ECA9A233250A8001B4D52 /* Roboto-Black.ttf */; };
+		AD9ECAAE23325BF9001B4D52 /* UIViewController+ShowAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9ECAAD23325BF9001B4D52 /* UIViewController+ShowAlert.swift */; };
 		BA4791CDECD5266A64627956 /* Pods_Cocktail_DB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC3C3A21B6F27DBBDF1FDE2 /* Pods_Cocktail_DB.framework */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +95,7 @@
 		AD9ECA98233250A8001B4D52 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		AD9ECA99233250A8001B4D52 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		AD9ECA9A233250A8001B4D52 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		AD9ECAAD23325BF9001B4D52 /* UIViewController+ShowAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ShowAlert.swift"; sourceTree = "<group>"; };
 		BEAF615D35141736829D13F1 /* Pods-Cocktail DB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cocktail DB.release.xcconfig"; path = "Target Support Files/Pods-Cocktail DB/Pods-Cocktail DB.release.xcconfig"; sourceTree = "<group>"; };
 		CAC3C3A21B6F27DBBDF1FDE2 /* Pods_Cocktail_DB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cocktail_DB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -204,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				AD9ECA5D233104E2001B4D52 /* UIView+ReuseIdentifier.swift */,
+				AD9ECAAD23325BF9001B4D52 /* UIViewController+ShowAlert.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -475,6 +478,7 @@
 				AD9ECA7823321B38001B4D52 /* FilterCell.swift in Sources */,
 				AD9ECA4D2330E86E001B4D52 /* Category.swift in Sources */,
 				AD5D53F4232CC0720038C175 /* DrinksViewController.swift in Sources */,
+				AD9ECAAE23325BF9001B4D52 /* UIViewController+ShowAlert.swift in Sources */,
 				AD5D540B232E8CA20038C175 /* Networkable.swift in Sources */,
 				AD9ECA5E233104E2001B4D52 /* UIView+ReuseIdentifier.swift in Sources */,
 				AD9ECA6823320444001B4D52 /* DrinksList.swift in Sources */,

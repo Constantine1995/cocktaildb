@@ -23,11 +23,12 @@ class DrinksViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    private lazy var dataSource = DrinksDataSource(delegate: self)
+    private lazy var dataSource = DrinksDataSource(self, delegate: self)
     
     let heightForHeaderInSection: CGFloat = 44.0
     let heightForRowAt: CGFloat = 88.0
   
+    
     // MARK: - Initialization
 
     override func viewDidLoad() {
@@ -149,5 +150,13 @@ extension DrinksViewController: FiltersViewControllerDelegate {
     func filtersDidChange(filters: [String]) {
         isRightBarbuttonItemBadgeHidden(!filters.isEmpty)
         dataSource.setCategoriesToFilter(from: filters)
+    }
+}
+
+// MARK: - CocktailViewDeleagte
+
+extension DrinksViewController: CocktailViewDeleagte {
+    func displayError(error: NSError) {
+        self.showAlert(title: "Error!", message: error.localizedDescription)
     }
 }

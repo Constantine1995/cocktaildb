@@ -8,26 +8,34 @@
 
 import Moya
 
+protocol CocktailViewDeleagte: NSObjectProtocol {
+    func displayError(error: NSError)
+}
+
 class DrinksDataSource {
     
     // MARK: Properties
-
+    
     private let drinksService = DrinkService()
     private var categories = [Category]()
     private var allCategories = [Category]()
     private var drinks = [[Drink]]()
     private let delegate: DataSourceDelegate
     
+    weak var cocktailViewDeleagte: CocktailViewDeleagte?
+    
     // MARK: - Initialization
     
-    init(delegate: DataSourceDelegate) {
+    init(_ cocktailViewDeleagte: CocktailViewDeleagte?, delegate: DataSourceDelegate) {
+        self.cocktailViewDeleagte = cocktailViewDeleagte
         self.delegate = delegate
+        
     }
     
     func loadCategories() {
         drinksService.fetchCategories {  [weak self] (response, error) in
             if let error = error {
-                print("ERROR: \(error)")
+                self?.cocktailViewDeleagte?.displayError(error: error as NSError)
                 return
             }
             self?.categoriesDidLoad(response: response!)
@@ -42,7 +50,7 @@ class DrinksDataSource {
         drinksService.fetchDrinks(categoryName: category.strCategory ) { [weak self] (response, error) in
             
             if let error = error {
-                print("ERROR: \(error)")
+                self?.cocktailViewDeleagte?.displayError(error: error as NSError)
                 return
             }
             categoriesForLoad.removeFirst()
@@ -50,7 +58,7 @@ class DrinksDataSource {
             self?.loadDrinksByCategories(categoriesForLoad)
         }
     }
-
+    
     //MARK - Helpers
     
     func getCategoriesNames() -> [String] {
