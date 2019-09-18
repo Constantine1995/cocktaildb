@@ -1,5 +1,5 @@
 //
-//  DrinksCategory.swift
+//  Category.swift
 //  Cocktail DB
 //
 //  Created by Constantine Likhachov on 9/15/19.
@@ -8,9 +8,9 @@
 
 import Moya
 
-typealias Categories = DrinksList<DrinksCategory>
+typealias Categories = DrinksList<Category>
 
-struct DrinksCategory: Codable, Equatable {
+struct Category: Codable, Equatable {
     var strCategory: String
     
     enum CodingKeys: String, CodingKey {

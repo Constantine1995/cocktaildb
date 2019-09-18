@@ -9,9 +9,9 @@
 import Moya
 
 typealias Codable = Encodable & Decodable
-typealias DrinkList = DrinksList<DrinksCodable>
+typealias DrinkList = DrinksList<Drink>
 
-struct DrinksCodable: Codable {
+struct Drink: Codable {
     var strDrink: String
     var strDrinkThumb: String
     var idDrink: String
@@ -23,7 +23,7 @@ struct DrinksCodable: Codable {
     }
 }
 
-extension DrinksCodable {
+extension Drink {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.strDrink = try! container.decode(String.self, forKey: .strDrink)

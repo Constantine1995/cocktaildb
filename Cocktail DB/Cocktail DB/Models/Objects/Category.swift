@@ -2,27 +2,27 @@
 //  Category.swift
 //  Cocktail DB
 //
-//  Created by Constantine Likhachov on 9/17/19.
+//  Created by Constantine Likhachov on 9/15/19.
 //  Copyright © 2019 Constantine Likhachov. All rights reserved.
 //
 
-import ObjectMapper
+typealias CategoriesList = DrinksList<Category>
 
-//typealias Categories = ItemsLIst<Category>
+struct Category: Codable, Equatable {
 
-class Category: NSObject, Mappable {
-    
     // MARK: Properties
-    
-    var name: String?
+
+    var strCategory: String
     
     // MARK: Initialization
-    
-    required convenience init?(map: Map) {
-        self.init()
+
+    enum CodingKeys: String, CodingKey {
+        case strCategory
     }
     
-    func mapping(map: Map) {
-        name <- map["strCategory"]
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.strCategory = try! container.decode(String.self, forKey: .strCategory)
     }
 }
+

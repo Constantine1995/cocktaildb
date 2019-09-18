@@ -1,32 +1,38 @@
 //
-//  Drink.swift
+//  Drinks.swift
 //  Cocktail DB
 //
-//  Created by Constantine Likhachov on 9/17/19.
+//  Created by Constantine Likhachov on 9/16/19.
 //  Copyright © 2019 Constantine Likhachov. All rights reserved.
 //
 
-import ObjectMapper
+import Moya
 
-typealias Drinks = ItemsLIst<Drink>
+typealias Codable = Encodable & Decodable
+typealias DrinkList = DrinksList<Drink>
 
-class Drink: Mappable {
-    
+struct Drink: Codable {
+
     // MARK: Properties
-    
-    var id: Int?
-    var name: String?
-    var imageUrl: String?
+
+    var strDrink: String
+    var strDrinkThumb: String
+    var idDrink: String
     
     // MARK: Initialization
-    
-    required convenience init?(map: Map) {
-        self.init()
+
+    enum CodingKeys: String, CodingKey {
+        case strDrink
+        case strDrinkThumb
+        case idDrink
     }
-    
-    func mapping(map: Map) {
-        id <- map["idDrink"]
-        name <- map["strDrink"]
-        imageUrl <- map["strDrinkThumb"]
+}
+
+extension Drink {
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.strDrink = try! container.decode(String.self, forKey: .strDrink)
+        self.strDrinkThumb = try! container.decode(String.self, forKey: .strDrinkThumb)
+        self.idDrink = try! container.decode(String.self, forKey: .idDrink)
     }
 }

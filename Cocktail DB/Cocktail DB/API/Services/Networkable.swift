@@ -10,7 +10,7 @@ import Foundation
 import Moya
 protocol Networkable {
 
-    func fetchCategories(completion: @escaping (Categories?, Error?) -> ())
+    func fetchCategories(completion: @escaping (CategoriesList?, Error?) -> ())
 
     func fetchDrinks(categoryName: String, completion: @escaping (DrinkList?, Error?) -> ())
 }

@@ -12,13 +12,7 @@
 		AD5D53F7232CC0720038C175 /* DrinksViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD5D53F5232CC0720038C175 /* DrinksViewController.storyboard */; };
 		AD5D53F9232CC0740038C175 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD5D53F8232CC0740038C175 /* Assets.xcassets */; };
 		AD5D53FC232CC0740038C175 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD5D53FA232CC0740038C175 /* LaunchScreen.storyboard */; };
-		AD5D5408232E87880038C175 /* DrinksCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5D5407232E87880038C175 /* DrinksCategory.swift */; };
 		AD5D540B232E8CA20038C175 /* Networkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5D540A232E8CA20038C175 /* Networkable.swift */; };
-		AD5D540D232E8FC50038C175 /* DrinksCategoryServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5D540C232E8FC50038C175 /* DrinksCategoryServices.swift */; };
-		AD5D5411232EB1980038C175 /* DrinksCategoryListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5D5410232EB1980038C175 /* DrinksCategoryListResponse.swift */; };
-		AD5D5413232EC9DF0038C175 /* DrinksServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5D5412232EC9DF0038C175 /* DrinksServices.swift */; };
-		AD5D5415232F56270038C175 /* DrinksCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5D5414232F56270038C175 /* DrinksCodable.swift */; };
-		AD5D5417232F56AD0038C175 /* DrinksListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5D5416232F56AD0038C175 /* DrinksListResponse.swift */; };
 		AD5D5422232F82380038C175 /* DrinksCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5D5420232F82380038C175 /* DrinksCategoryTableViewCell.swift */; };
 		AD5D5423232F82380038C175 /* DrinksCategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD5D5421232F82380038C175 /* DrinksCategoryTableViewCell.xib */; };
 		AD5D5426232F85A50038C175 /* DrinksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5D5424232F85A50038C175 /* DrinksTableViewCell.swift */; };
@@ -26,12 +20,11 @@
 		AD9ECA472330E52F001B4D52 /* BaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9ECA462330E52F001B4D52 /* BaseProvider.swift */; };
 		AD9ECA492330E544001B4D52 /* DrinkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9ECA482330E544001B4D52 /* DrinkProvider.swift */; };
 		AD9ECA4D2330E86E001B4D52 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9ECA4C2330E86E001B4D52 /* Category.swift */; };
-		AD9ECA4F2330E8E5001B4D52 /* ItemsLIst.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9ECA4E2330E8E5001B4D52 /* ItemsLIst.swift */; };
 		AD9ECA512330E95B001B4D52 /* DrinksDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9ECA502330E95B001B4D52 /* DrinksDataSource.swift */; };
-		AD9ECA532330FA66001B4D52 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9ECA522330FA66001B4D52 /* Drink.swift */; };
 		AD9ECA552330FC9E001B4D52 /* DrinkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9ECA542330FC9E001B4D52 /* DrinkService.swift */; };
 		AD9ECA5E233104E2001B4D52 /* UIView+ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9ECA5D233104E2001B4D52 /* UIView+ReuseIdentifier.swift */; };
 		AD9ECA6823320444001B4D52 /* DrinksList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9ECA6723320444001B4D52 /* DrinksList.swift */; };
+		AD9ECA6A233212DC001B4D52 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9ECA69233212DC001B4D52 /* Drink.swift */; };
 		BA4791CDECD5266A64627956 /* Pods_Cocktail_DB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC3C3A21B6F27DBBDF1FDE2 /* Pods_Cocktail_DB.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,13 +37,7 @@
 		AD5D53F8232CC0740038C175 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD5D53FB232CC0740038C175 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD5D53FD232CC0740038C175 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AD5D5407232E87880038C175 /* DrinksCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksCategory.swift; sourceTree = "<group>"; };
 		AD5D540A232E8CA20038C175 /* Networkable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networkable.swift; sourceTree = "<group>"; };
-		AD5D540C232E8FC50038C175 /* DrinksCategoryServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksCategoryServices.swift; sourceTree = "<group>"; };
-		AD5D5410232EB1980038C175 /* DrinksCategoryListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksCategoryListResponse.swift; sourceTree = "<group>"; };
-		AD5D5412232EC9DF0038C175 /* DrinksServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksServices.swift; sourceTree = "<group>"; };
-		AD5D5414232F56270038C175 /* DrinksCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksCodable.swift; sourceTree = "<group>"; };
-		AD5D5416232F56AD0038C175 /* DrinksListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksListResponse.swift; sourceTree = "<group>"; };
 		AD5D5420232F82380038C175 /* DrinksCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksCategoryTableViewCell.swift; sourceTree = "<group>"; };
 		AD5D5421232F82380038C175 /* DrinksCategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrinksCategoryTableViewCell.xib; sourceTree = "<group>"; };
 		AD5D5424232F85A50038C175 /* DrinksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksTableViewCell.swift; sourceTree = "<group>"; };
@@ -58,12 +45,11 @@
 		AD9ECA462330E52F001B4D52 /* BaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProvider.swift; sourceTree = "<group>"; };
 		AD9ECA482330E544001B4D52 /* DrinkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkProvider.swift; sourceTree = "<group>"; };
 		AD9ECA4C2330E86E001B4D52 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
-		AD9ECA4E2330E8E5001B4D52 /* ItemsLIst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsLIst.swift; sourceTree = "<group>"; };
 		AD9ECA502330E95B001B4D52 /* DrinksDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksDataSource.swift; sourceTree = "<group>"; };
-		AD9ECA522330FA66001B4D52 /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
 		AD9ECA542330FC9E001B4D52 /* DrinkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkService.swift; sourceTree = "<group>"; };
 		AD9ECA5D233104E2001B4D52 /* UIView+ReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ReuseIdentifier.swift"; sourceTree = "<group>"; };
 		AD9ECA6723320444001B4D52 /* DrinksList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksList.swift; sourceTree = "<group>"; };
+		AD9ECA69233212DC001B4D52 /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
 		BEAF615D35141736829D13F1 /* Pods-Cocktail DB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cocktail DB.release.xcconfig"; path = "Target Support Files/Pods-Cocktail DB/Pods-Cocktail DB.release.xcconfig"; sourceTree = "<group>"; };
 		CAC3C3A21B6F27DBBDF1FDE2 /* Pods_Cocktail_DB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cocktail_DB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -118,8 +104,8 @@
 		AD5D53F0232CC0720038C175 /* Cocktail DB */ = {
 			isa = PBXGroup;
 			children = (
-				AD5D5405232E7FB20038C175 /* Views */,
 				AD5D5404232E7FA60038C175 /* Models */,
+				AD5D5405232E7FB20038C175 /* Views */,
 				AD5D5403232E7F980038C175 /* Controllers */,
 				AD9ECA452330E51D001B4D52 /* API */,
 				AD5D5409232E8C930038C175 /* Extensions */,
@@ -142,7 +128,6 @@
 		AD5D5404232E7FA60038C175 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				AD9ECA622331F699001B4D52 /* old */,
 				AD9ECA652331F730001B4D52 /* Objects */,
 				AD9ECA502330E95B001B4D52 /* DrinksDataSource.swift */,
 			);
@@ -173,15 +158,6 @@
 				AD9ECA5D233104E2001B4D52 /* UIView+ReuseIdentifier.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		AD9ECA402330C938001B4D52 /* DrinkCategory */ = {
-			isa = PBXGroup;
-			children = (
-				AD5D540C232E8FC50038C175 /* DrinksCategoryServices.swift */,
-				AD5D5410232EB1980038C175 /* DrinksCategoryListResponse.swift */,
-			);
-			path = DrinkCategory;
 			sourceTree = "<group>";
 		};
 		AD9ECA432330C9F8001B4D52 /* DrinkCategoryCell */ = {
@@ -228,18 +204,6 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		AD9ECA622331F699001B4D52 /* old */ = {
-			isa = PBXGroup;
-			children = (
-				AD9ECA402330C938001B4D52 /* DrinkCategory */,
-				AD5D5416232F56AD0038C175 /* DrinksListResponse.swift */,
-				AD5D5412232EC9DF0038C175 /* DrinksServices.swift */,
-				AD5D5407232E87880038C175 /* DrinksCategory.swift */,
-				AD5D5414232F56270038C175 /* DrinksCodable.swift */,
-			);
-			path = old;
-			sourceTree = "<group>";
-		};
 		AD9ECA632331F6C5001B4D52 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,9 +223,8 @@
 		AD9ECA652331F730001B4D52 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				AD9ECA522330FA66001B4D52 /* Drink.swift */,
+				AD9ECA69233212DC001B4D52 /* Drink.swift */,
 				AD9ECA4C2330E86E001B4D52 /* Category.swift */,
-				AD9ECA4E2330E8E5001B4D52 /* ItemsLIst.swift */,
 				AD9ECA6723320444001B4D52 /* DrinksList.swift */,
 			);
 			path = Objects;
@@ -393,24 +356,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD5D5411232EB1980038C175 /* DrinksCategoryListResponse.swift in Sources */,
 				AD9ECA552330FC9E001B4D52 /* DrinkService.swift in Sources */,
 				AD5D5426232F85A50038C175 /* DrinksTableViewCell.swift in Sources */,
 				AD9ECA492330E544001B4D52 /* DrinkProvider.swift in Sources */,
-				AD5D5408232E87880038C175 /* DrinksCategory.swift in Sources */,
-				AD9ECA4F2330E8E5001B4D52 /* ItemsLIst.swift in Sources */,
 				AD9ECA472330E52F001B4D52 /* BaseProvider.swift in Sources */,
 				AD9ECA4D2330E86E001B4D52 /* Category.swift in Sources */,
-				AD5D5415232F56270038C175 /* DrinksCodable.swift in Sources */,
 				AD5D53F4232CC0720038C175 /* DrinksViewController.swift in Sources */,
-				AD9ECA532330FA66001B4D52 /* Drink.swift in Sources */,
 				AD5D540B232E8CA20038C175 /* Networkable.swift in Sources */,
-				AD5D540D232E8FC50038C175 /* DrinksCategoryServices.swift in Sources */,
 				AD9ECA5E233104E2001B4D52 /* UIView+ReuseIdentifier.swift in Sources */,
 				AD9ECA6823320444001B4D52 /* DrinksList.swift in Sources */,
 				AD9ECA512330E95B001B4D52 /* DrinksDataSource.swift in Sources */,
-				AD5D5417232F56AD0038C175 /* DrinksListResponse.swift in Sources */,
-				AD5D5413232EC9DF0038C175 /* DrinksServices.swift in Sources */,
+				AD9ECA6A233212DC001B4D52 /* Drink.swift in Sources */,
 				AD5D53F2232CC0720038C175 /* AppDelegate.swift in Sources */,
 				AD5D5422232F82380038C175 /* DrinksCategoryTableViewCell.swift in Sources */,
 			);

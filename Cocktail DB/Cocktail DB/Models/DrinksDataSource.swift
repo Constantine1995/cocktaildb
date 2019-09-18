@@ -11,15 +11,9 @@ import Moya
 class DrinksDataSource {
     
     private let drinksService = DrinkService()
-//    private var categories = [Category]()
-    private var categoriesNew = [DrinksCategory]()
-
-//    private var allCategories = [Category]()
-    private var allCategories = [DrinksCategory]()
-
-//    private var drinks = [[Drink]]()
-    private var drinksNew = [[DrinksCodable]]()
-
+    private var categories = [Category]()
+    private var allCategories = [Category]()
+    private var drinks = [[Drink]]()
     private let delegate: DataSourceDelegate
     
     // MARK: - Initialization
@@ -38,7 +32,7 @@ class DrinksDataSource {
         }
     }
     
-    func loadDrinksByCategories(_ categories: [DrinksCategory]) {
+    func loadDrinksByCategories(_ categories: [Category]) {
         
         var categoriesForLoad = categories
         guard !categoriesForLoad.isEmpty else { return }
@@ -54,73 +48,47 @@ class DrinksDataSource {
             self?.loadDrinksByCategories(categoriesForLoad)
         }
     }
-//    func loadDrinksByCategories(_ categories: [Category]) {
-//
-//        var categoriesForLoad = categories
-//        guard !categoriesForLoad.isEmpty else { return }
-//        guard let category = categoriesForLoad.first else { return}
-//        drinksService.fetchDrinks(categoryName: category.name ?? "") { [weak self] (response, error) in
-//
-//            if let error = error {
-//                print("ERROR: \(error)")
-//                return
-//            }
-//            categoriesForLoad.removeFirst()
-//            self?.drinksDidLoadForCategory(сategory: category, responce: response!)
-//
-////            self?.drinksDidLoadForCategory(сategory: category, responce: response!)
-//            self?.loadDrinksByCategories(categoriesForLoad)
-//        }
-//    }
-    
+
     //MARK - Helpers
     
     func numberOfSections() -> Int {
-        return categoriesNew.count
+        return categories.count
     }
     
-    func categoryForSection(_ section: Int) -> DrinksCategory {
-        return categoriesNew[section]
+    func categoryForSection(_ section: Int) -> Category {
+        return categories[section]
     }
     
-    func getCategories() -> [DrinksCategory] {
-        return categoriesNew
+    func getCategories() -> [Category] {
+        return categories
     }
     
-    func drinkForIndexPath(indexPath: IndexPath) -> DrinksCodable {
-        guard drinksNew.count > indexPath.section, drinksNew[indexPath.section].count > indexPath.row else { return DrinksCodable.init(strDrink: "", strDrinkThumb: "", idDrink: "")}
-        return drinksNew[indexPath.section][indexPath.row]
+    func drinkForIndexPath(indexPath: IndexPath) -> Drink {
+        let defaultDrink = Drink.init(strDrink: "", strDrinkThumb: "", idDrink: "")
+        guard drinks.count > indexPath.section, drinks[indexPath.section].count > indexPath.row else { return defaultDrink}
+        return drinks[indexPath.section][indexPath.row]
     }
     
     func numberOfRowsInSection(section: Int) -> Int {
-        guard drinksNew.count > section else { return 0 }
+        guard drinks.count > section else { return 0 }
         
-        return drinksNew[section].count
+        return drinks[section].count
     }
     
     //MARK: - Data did load methods
     
-    private func categoriesDidLoad(response: Categories) {
-        categoriesNew.removeAll()
+    private func categoriesDidLoad(response: CategoriesList) {
+        categories.removeAll()
         guard let categoriesFromServes = response.drinks else { return }
         allCategories = categoriesFromServes
-        categoriesNew = categoriesFromServes
+        categories = categoriesFromServes
         delegate.didLoadCategories()
     }
     
-    
-    private func drinksDidLoadForCategory(сategory: DrinksCategory, responce: DrinkList) {
-        guard let section = categoriesNew.firstIndex(of: сategory),
+    private func drinksDidLoadForCategory(сategory: Category, responce: DrinkList) {
+        guard let section = categories.firstIndex(of: сategory),
             let drinksForSection = responce.drinks else { return }
-        drinksNew.append(drinksForSection)
+        drinks.append(drinksForSection)
         delegate.didLoadDrinksForSection(section: section)
     }
-    
-    //    private func drinksDidLoadForCategory(сategory: Category, responce: Drinks) {
-    //        guard let section = categories.firstIndex(of: сategory),
-    //            let drinksForSection = responce.list else { return }
-    //
-    //        drinks.append(drinksForSection)
-    //        delegate.didLoadDrinksForSection(section: section)
-    //    }
 }
