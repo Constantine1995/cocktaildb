@@ -8,7 +8,7 @@
 
 import ObjectMapper
 
-typealias Categories = ItemsLIst<Category>
+//typealias Categories = ItemsLIst<Category>
 
 class Category: NSObject, Mappable {
     

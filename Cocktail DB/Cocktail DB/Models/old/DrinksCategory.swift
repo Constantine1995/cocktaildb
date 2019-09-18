@@ -8,8 +8,9 @@
 
 import Moya
 
+typealias Categories = DrinksList<DrinksCategory>
 
-struct DrinksCategory: Codable {
+struct DrinksCategory: Codable, Equatable {
     var strCategory: String
     
     enum CodingKeys: String, CodingKey {

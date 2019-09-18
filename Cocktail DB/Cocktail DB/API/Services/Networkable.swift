@@ -12,5 +12,5 @@ protocol Networkable {
 
     func fetchCategories(completion: @escaping (Categories?, Error?) -> ())
 
-    func fetchDrinks(categoryName: String, completion: @escaping (Drinks?, Error?) -> ())
+    func fetchDrinks(categoryName: String, completion: @escaping (DrinkList?, Error?) -> ())
 }

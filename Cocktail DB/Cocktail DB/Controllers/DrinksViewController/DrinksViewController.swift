@@ -53,7 +53,7 @@ extension DrinksViewController: UITableViewDelegate {
         
         let headerView = Bundle.main.loadNibNamed("DrinksCategoryTableViewCell", owner: self, options: nil)?.first as! DrinksCategoryTableViewCell
         let category = dataSource.categoryForSection(section)
-        headerView.titleLabel.text = category.name?.uppercased() ?? "Empty"
+        headerView.titleLabel.text = category.strCategory.uppercased() ?? "Empty"
         return headerView
     }
     
@@ -78,11 +78,11 @@ extension DrinksViewController: UITableViewDataSource {
         
         let drink = dataSource.drinkForIndexPath(indexPath: indexPath)
         
-        let url = URL(string: drink.imageUrl ?? "")
+        let url = URL(string: drink.strDrinkThumb ?? "")
         
         cell.drinkImage.sd_setImage(with: url, placeholderImage: UIImage(named: "placeholder"))
         
-        cell.nameLabel.text = drink.name ?? "Empty"
+        cell.nameLabel.text = drink.strDrink ?? "Empty"
         
         return cell
     }
