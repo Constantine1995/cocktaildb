@@ -12,6 +12,12 @@ class DrinkCategoryHeader: UITableViewHeaderFooterView {
     
     // MARK: - Properties & IBOutlets
     
-    @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak private var categoryLabel: UILabel!
+    
+    //MARK: - Setters
+    
+    func setcategoryLabelText(text: String) {
+        categoryLabel.text = text
+    }
     
 }

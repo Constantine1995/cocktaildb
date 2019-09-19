@@ -12,7 +12,17 @@ class DrinkCell: UITableViewCell {
     
     // MARK: - Properties & IBOutlets
     
-    @IBOutlet weak var drinkImage: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak private var drinkImage: UIImageView!
+    @IBOutlet weak private var nameLabel: UILabel!
+    
+    //MARK: - Setters
+    
+    func setDrinkImage(from urlString: String) {
+        drinkImage.sd_setImage(with: URL(string: urlString), placeholderImage: UIImage(named: "placeholder"))
+    }
+    
+    func setNameLabelText(text: String) {
+        nameLabel.text = text
+    }
     
 }

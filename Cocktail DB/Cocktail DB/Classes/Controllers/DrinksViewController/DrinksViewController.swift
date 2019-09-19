@@ -23,7 +23,7 @@ class DrinksViewController: UIViewController {
     
     // MARK: - Properties & IBOutlets
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak private var tableView: UITableView!
     
     private lazy var dataSource = DrinksDataSource(self, delegate: self)
     
@@ -86,7 +86,7 @@ extension DrinksViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: DrinkCategoryHeader.reuseIdentifier) as? DrinkCategoryHeader
         let category = dataSource.categoryForSection(section)
-        headerView?.categoryLabel.text = category.strCategory.uppercased()        
+         headerView?.setcategoryLabelText(text:category.strCategory.uppercased())
         return headerView
     }
     
@@ -112,12 +112,10 @@ extension DrinksViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: DrinkCell.reuseIdentifier, for: indexPath) as! DrinkCell
         
         let drink = dataSource.drinkForIndexPath(indexPath: indexPath)
+
+        cell.setDrinkImage(from: drink.strDrinkThumb)
         
-        let url = URL(string: drink.strDrinkThumb )
-        
-        cell.drinkImage.sd_setImage(with: url, placeholderImage: UIImage(named: "placeholder"))
-        
-        cell.nameLabel.text = drink.strDrink
+        cell.setNameLabelText(text: drink.strDrink)
         
         return cell
     }

@@ -8,6 +8,7 @@
 
 import Foundation
 import Moya
+
 protocol Networkable {
     
     func fetchCategories(completion: @escaping (CategoriesList?, Error?) -> ())

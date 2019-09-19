@@ -11,6 +11,12 @@ class FilterCell: UITableViewCell  {
     
     // MARK: - Properties & IBOutlets
     
-    @IBOutlet weak var filterNameLabel: UILabel!
+    @IBOutlet weak private var filterNameLabel: UILabel!
+    
+    //MARK: - Setters
+    
+    func setFilterNameLabelText(text: String) {
+        filterNameLabel.text = text
+    }
     
 }

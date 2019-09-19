@@ -208,8 +208,8 @@
 		AD9ECA442330CA01001B4D52 /* DrinksCell */ = {
 			isa = PBXGroup;
 			children = (
-				AD5D5425232F85A50038C175 /* DrinkCell.xib */,
 				AD5D5424232F85A50038C175 /* DrinkCell.swift */,
+				AD5D5425232F85A50038C175 /* DrinkCell.xib */,
 			);
 			path = DrinksCell;
 			sourceTree = "<group>";
@@ -226,8 +226,8 @@
 		AD9ECA602331F60D001B4D52 /* DrinksViewController */ = {
 			isa = PBXGroup;
 			children = (
-				AD5D53F5232CC0720038C175 /* DrinksViewController.storyboard */,
 				AD5D53F3232CC0720038C175 /* DrinksViewController.swift */,
+				AD5D53F5232CC0720038C175 /* DrinksViewController.storyboard */,
 			);
 			path = DrinksViewController;
 			sourceTree = "<group>";
@@ -261,8 +261,8 @@
 		AD9ECA6B233218F8001B4D52 /* FiltersViewController */ = {
 			isa = PBXGroup;
 			children = (
-				AD9ECA6C233218F8001B4D52 /* FiltersViewController.storyboard */,
 				AD9ECA7023321AFA001B4D52 /* FiltersViewControllerDelegate.swift */,
+				AD9ECA6C233218F8001B4D52 /* FiltersViewController.storyboard */,
 			);
 			path = FiltersViewController;
 			sourceTree = "<group>";
@@ -270,8 +270,8 @@
 		AD9ECA7223321B2A001B4D52 /* FilterCell */ = {
 			isa = PBXGroup;
 			children = (
-				AD9ECA7423321B2A001B4D52 /* FilterCell.xib */,
 				AD9ECA7723321B38001B4D52 /* FilterCell.swift */,
+				AD9ECA7423321B2A001B4D52 /* FilterCell.xib */,
 			);
 			path = FilterCell;
 			sourceTree = "<group>";
@@ -279,8 +279,8 @@
 		AD9ECA8123322D43001B4D52 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
-				AD9ECA8223322D43001B4D52 /* DrinkCategoryHeader.swift */,
 				AD9ECA8323322D43001B4D52 /* DrinkCategoryHeader.xib */,
+				AD9ECA8223322D43001B4D52 /* DrinkCategoryHeader.swift */,
 			);
 			name = Headers;
 			path = Headers/Headers;

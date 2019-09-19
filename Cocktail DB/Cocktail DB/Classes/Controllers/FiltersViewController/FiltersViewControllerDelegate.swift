@@ -120,8 +120,8 @@ extension FiltersViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: FilterCell.reuseIdentifier) as! FilterCell
-        cell.filterNameLabel.text = FiltersViewController.allFilters[indexPath.row]
-        
+        cell.setFilterNameLabelText(text: FiltersViewController.allFilters[indexPath.row])
+
         return cell
     }
     
