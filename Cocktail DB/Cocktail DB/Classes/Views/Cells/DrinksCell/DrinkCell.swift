@@ -11,7 +11,8 @@ import UIKit
 class DrinkCell: UITableViewCell {
     
     // MARK: - Properties & IBOutlets
-
+    
     @IBOutlet weak var drinkImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
+    
 }

@@ -12,4 +12,5 @@ class FilterCell: UITableViewCell  {
     // MARK: - Properties & IBOutlets
     
     @IBOutlet weak var filterNameLabel: UILabel!
+    
 }

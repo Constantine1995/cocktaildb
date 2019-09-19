@@ -15,7 +15,7 @@ class DrinksList<T: Codable>: NSObject, Codable {
     var drinks: [T]?
     
     // MARK: Initialization
-
+    
     enum CodingKeys: String, CodingKey {
         case drinks
     }
@@ -24,4 +24,5 @@ class DrinksList<T: Codable>: NSObject, Codable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.drinks = try! container.decode([T].self, forKey: .drinks)
     }
+    
 }

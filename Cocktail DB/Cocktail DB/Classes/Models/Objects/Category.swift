@@ -9,13 +9,13 @@
 typealias CategoriesList = DrinksList<Category>
 
 struct Category: Codable, Equatable {
-
+    
     // MARK: Properties
-
+    
     var strCategory: String
     
     // MARK: Initialization
-
+    
     enum CodingKeys: String, CodingKey {
         case strCategory
     }
@@ -24,5 +24,6 @@ struct Category: Codable, Equatable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.strCategory = try! container.decode(String.self, forKey: .strCategory)
     }
+    
 }
 

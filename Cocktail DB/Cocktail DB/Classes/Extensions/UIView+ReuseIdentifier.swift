@@ -8,6 +8,7 @@
 
 import UIKit
 extension UIView {
+    
     static var reuseIdentifier: String {
         return String(describing: self)
     }
@@ -15,4 +16,5 @@ extension UIView {
     static var nib: UINib {
         return UINib(nibName: self.reuseIdentifier, bundle: nil)
     }
+    
 }

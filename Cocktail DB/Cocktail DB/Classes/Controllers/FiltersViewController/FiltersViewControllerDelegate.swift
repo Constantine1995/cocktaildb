@@ -9,7 +9,9 @@
 import UIKit
 
 public protocol FiltersViewControllerDelegate {
+    
     func filtersDidChange(filters: [String])
+    
 }
 
 class FiltersViewController: UIViewController {
@@ -20,9 +22,13 @@ class FiltersViewController: UIViewController {
     @IBOutlet weak private var applyButton: UIButton!
     
     private static var allFilters = [String]()
+    
     private static var previousSelectedFilters: [String]?
+    
     private var currentSelectedFilters = [String]()
+    
     private var delegate: FiltersViewControllerDelegate?
+    
     private let heightForRowAt: CGFloat = 30.0
     
     // MARK: - Initialization
@@ -39,10 +45,10 @@ class FiltersViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configurViewController()
+        configureViewController()
     }
     
-    private func configurViewController() {
+    private func configureViewController() {
         if FiltersViewController.previousSelectedFilters == nil {
             FiltersViewController.previousSelectedFilters = [String]()
         }
@@ -97,14 +103,17 @@ class FiltersViewController: UIViewController {
         delegate.filtersDidChange(filters: currentSelectedFilters)
         navigationController?.popViewController(animated: true)
     }
+    
 }
 
 // MARK: - UITableViewDataSource
 
 extension FiltersViewController: UITableViewDataSource {
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return FiltersViewController.allFilters.count
     }
@@ -115,11 +124,13 @@ extension FiltersViewController: UITableViewDataSource {
         
         return cell
     }
+    
 }
 
 // MARK: - UITableViewDelegate
 
 extension FiltersViewController: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return heightForRowAt
     }
@@ -139,4 +150,5 @@ extension FiltersViewController: UITableViewDelegate {
             updateApplyButton()
         }
     }
+    
 }

@@ -20,22 +20,29 @@ extension BaseProvider {
         }
         return url
     }
+    
     var path: String {
         return ""
     }
+    
     var method: Moya.Method {
         return .get
     }
+    
     var task: Task {
         return .requestPlain
     }
+    
     var sampleData: Data {
         return "Not used?".data(using: .utf8)!
     }
+    
     var headers: [String: String]? {
         return ["Content-type": "application/json"]
     }
+    
     var authorizationType: AuthorizationType {
         return .basic
     }
+    
 }

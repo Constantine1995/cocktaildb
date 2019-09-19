@@ -9,7 +9,9 @@
 import Moya
 
 protocol CocktailViewDeleagte: NSObjectProtocol {
+    
     func displayError(error: NSError)
+    
 }
 
 class DrinksDataSource {
@@ -17,10 +19,14 @@ class DrinksDataSource {
     // MARK: Properties
     
     private let drinksService = DrinkService()
-    private var categories = [Category]()
-    private var allCategories = [Category]()
-    private var drinks = [[Drink]]()
+
     private let delegate: DataSourceDelegate
+
+    private var categories = [Category]()
+
+    private var allCategories = [Category]()
+
+    private var drinks = [[Drink]]()
     
     weak var cocktailViewDeleagte: CocktailViewDeleagte?
     
@@ -117,4 +123,5 @@ class DrinksDataSource {
         drinks.append(drinksForSection)
         delegate.didLoadDrinksForSection(section: section)
     }
+    
 }

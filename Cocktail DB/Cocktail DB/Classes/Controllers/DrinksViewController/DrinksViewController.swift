@@ -12,25 +12,27 @@ import SVProgressHUD
 import PPBadgeViewSwift
 
 protocol DataSourceDelegate {
+    
     func didLoadCategories()
     func didLoadDrinksForSection(section: Int)
     func willLoadDrinks()
+    
 }
 
 class DrinksViewController: UIViewController {
     
     // MARK: - Properties & IBOutlets
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     private lazy var dataSource = DrinksDataSource(self, delegate: self)
     
     let heightForHeaderInSection: CGFloat = 44.0
+    
     let heightForRowAt: CGFloat = 88.0
-  
     
     // MARK: - Initialization
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewController()
@@ -46,7 +48,6 @@ class DrinksViewController: UIViewController {
     private func configureTableView() {
         tableView.register(DrinkCell.nib, forCellReuseIdentifier: DrinkCell.reuseIdentifier)
         tableView.register(DrinkCategoryHeader.nib, forHeaderFooterViewReuseIdentifier: DrinkCategoryHeader.reuseIdentifier)
-
     }
     
     private func configureNavigationItems() {
@@ -71,6 +72,7 @@ class DrinksViewController: UIViewController {
         let filtersViewController = FiltersViewController.create(with: filters, delegate: self)
         self.navigationController?.pushViewController(filtersViewController, animated: true)
     }
+    
 }
 
 // MARK: - UITableViewDelegate
@@ -91,11 +93,13 @@ extension DrinksViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return heightForHeaderInSection
     }
+    
 }
 
 // MARK: - UITableViewDataSource
 
 extension DrinksViewController: UITableViewDataSource {
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return dataSource.numberOfSections()
     }
@@ -121,11 +125,13 @@ extension DrinksViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return heightForRowAt
     }
+    
 }
 
 // MARK: - DataSourceDelegate
 
 extension DrinksViewController: DataSourceDelegate {
+    
     func didLoadCategories() {
         tableView.reloadData()
         dataSource.loadDrinksByCategories(dataSource.getCategories())
@@ -134,7 +140,7 @@ extension DrinksViewController: DataSourceDelegate {
     func didLoadDrinksForSection(section: Int) {
         tableView.reloadSections(IndexSet(integer: section), with: .automatic)
         if section == dataSource.numberOfSections() - 1 {
-         SVProgressHUD.dismiss()
+            SVProgressHUD.dismiss()
         }
     }
     
@@ -142,21 +148,26 @@ extension DrinksViewController: DataSourceDelegate {
         SVProgressHUD.show()
         tableView.reloadData()
     }
+    
 }
 
 // MARK: - DrinksViewControllerDeleghate
 
 extension DrinksViewController: FiltersViewControllerDelegate {
+    
     func filtersDidChange(filters: [String]) {
         isRightBarbuttonItemBadgeHidden(!filters.isEmpty)
         dataSource.setCategoriesToFilter(from: filters)
     }
+    
 }
 
 // MARK: - CocktailViewDeleagte
 
 extension DrinksViewController: CocktailViewDeleagte {
+    
     func displayError(error: NSError) {
         self.showAlert(title: "Error!", message: error.localizedDescription)
     }
+    
 }

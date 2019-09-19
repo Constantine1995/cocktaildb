@@ -9,8 +9,10 @@
 import Moya
 
 enum DrinkProvider : BaseProvider {
+    
     case listCategories
     case listDrinks(categoryName: String)
+    
 }
 
 extension DrinkProvider : TargetType {
@@ -45,4 +47,5 @@ extension DrinkProvider : TargetType {
             return ["Content-type": "application/json"]
         }
     }
+    
 }
